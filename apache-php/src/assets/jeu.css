@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 150px;
+}
+
+#map {
+    height: 100vh;
+    margin: 0;
+}
+
+#inventaire {
+    background-color: #dda15e;
+}
+
+#liste {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: auto;
+    gap : 20px;
+    margin-top: 10px;
+}
+
+.objets {
+    display: grid;
+    grid-template-rows: 20px 120px;
+    height: 140px;
+    width: 120px;
+    margin: auto;
+    border: 3px solid #bc6c25;
+    padding: 0 5px 5px 5px;
+}
+
+.objets p{
+    margin: 0;
+    text-align: center;
+    color: #bc6c25;
+    font-weight: 700;
+}
+
+.objets #selectionné{
+    color: #fefae0;
+    margin: 0;
+    text-align: center;
+    font-weight: 700;
+}
+
+.objets img {
+    height: 100%;
+    width: 100%;
+}
