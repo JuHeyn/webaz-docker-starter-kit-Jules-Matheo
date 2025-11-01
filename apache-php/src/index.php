@@ -31,7 +31,15 @@ Flight::route('GET /api/objets', function() {
     
     $reponse = pg_query($link, $sql);
     $resultats = pg_fetch_all($reponse);
-    Flight::json($resultats);
+
+    foreach ($resultats as $ligne) {
+        $ligne["id"] = (int)$ligne["id"];
+        $ligne["min_zoom"] = (int)$ligne["min_zoom"];
+        $ligne["depart"] = (bool)$ligne["depart"];
+        $ligne["obj_avant"] = (int)$ligne["obj_avant"];
+        $resultat[] = $ligne;
+    }
+    Flight::json($resultat);
 });
 
 Flight::route('/test-db', function () {
