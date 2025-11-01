@@ -12,6 +12,28 @@ Flight::route('/jeu', function() {
     Flight::render('jeu');
 });
 
+Flight::route('GET /api/objets', function() {
+    $host = 'db';
+    $port = 5432;
+    $dbname = 'mydb';
+    $user = 'postgres';
+    $pass = 'postgres';
+
+    // Connexion BDD
+    $link = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$pass");
+    
+    if (isset($_GET["id"])) {
+        $id = $_GET["id"];
+        $sql = "SELECT  id, nom, indice, image, min_zoom, depart, obj_avant, code,ST_AsGeoJSON(geom) AS geom_wkt FROM objets WHERE id = {$id}"; 
+    } else {
+        $sql = "SELECT  id, nom, indice, image, min_zoom, depart, obj_avant, code,ST_AsGeoJSON(geom) AS geom_wkt FROM objets WHERE depart"; 
+    }
+    
+    $reponse = pg_query($link, $sql);
+    $resultats = pg_fetch_all($reponse);
+    Flight::json($resultats);
+});
+
 Flight::route('/test-db', function () {
     $host = 'db';
     $port = 5432;
