@@ -101,7 +101,7 @@ enigmes.forEach(e => {
     }
 });
 
-Vue.createApp({
+let app = Vue.createApp({
   data() {
     return {
         objets : [
@@ -125,6 +125,17 @@ Vue.createApp({
     methods: {
         équiper (objet) {
             this.équipé = objet.ordre;
+        },
+        ajouterObjet(objet) {
+            if (this.objetsTrouvés.includes(objet.ordre)) return;
+
+            this.objets.push(objet);
+            this.objetsTrouvés.push(objet.ordre);
+
+            alert("💎 Vous obtenez : " + objet.nom);
         }
     },
 }).mount('#inventaire');
+
+
+
