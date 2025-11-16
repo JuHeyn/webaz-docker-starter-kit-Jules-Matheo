@@ -75,6 +75,32 @@ let enigmes = [
 var heatmap = L.tileLayer.wms("http://localhost:8080/geoserver/wms", {layers: 'Escape-game:objets', format: 'image/png', transparent: true, tiled: true, crs: L.CRS.EPSG4326});
 var layerControl = L.control.layers(null, {'Triche' : heatmap },{collapsed : false}).addTo(map);
 
+
+enigmes.forEach(e => {
+    let marker = L.marker(e.coords).addTo(map);
+    if (e.type === "texte") {
+        marker.bindPopup(`
+            <b>ÉNIGME ${e.id}</b><br><br>
+            ${e.question}<br><br>
+            <input type="text" id="rep${e.id}" placeholder="Votre réponse"><br><br>
+            <button onclick="validerEnigme(${e.id})">Valider</button>
+        `);
+    }
+    if (e.type === "clic") {
+        marker.bindPopup(`
+            <b>ÉNIGME ${e.id}</b><br><br>
+            ${e.question}<br><br>
+            <i>Clique sur ce marqueur !</i>
+        `);
+
+        marker.on("click", () => {
+            alert("Bonne réponse ! Tous les chemins mènent à Rome 🇮🇹");
+            vm.ajouterObjet(e.objet);
+            map.closePopup();
+        });
+    }
+});
+
 Vue.createApp({
   data() {
     return {
