@@ -13,49 +13,61 @@ L.map('map', {
 let enigmes = [
     {
         id: 1,
-        coords: [48.853, 2.3498],
+        coords: [48.853, 2.3498], 
+        type: "texte",
         question: "Énigme 1 : Quel monument célèbre se trouve ici ? (réponse : notre-dame)",
         reponse: "notre-dame",
         objet: {
-            nom: "Clé ancienne",
+            nom: "Pierre du Temps",
             ordre: 3,
-            img: "../assets/img/cle.png"
+           // img: "../assets/img/pierre_temps.png"
         }
     },
-    
     {
         id: 2,
         coords: [48.8606, 2.3376],
+        type: "texte",
         question: "Énigme 2 : Quel musée célèbre est ici ? (réponse : louvre)",
         reponse: "louvre",
         objet: {
-            nom: "Fragment de carte",
+            nom: "Pierre de l’Espace",
             ordre: 4,
-            img: "../assets/img/carte.jpg"
+           // img: "../assets/img/pierre_espace.png"
         }
     },
-
     {
         id: 3,
-        coords: [48.8867, 2.3431],
+        coords: [48.8867, 2.3431], 
+        type: "texte",
         question: "Énigme 3 : Quel quartier artistique est ici ? (réponse : montmartre)",
         reponse: "montmartre",
         objet: {
-            nom: "Boussole",
+            nom: "Pierre de l’Âme",
             ordre: 5,
-            img: "../assets/img/boussole.png"
+            //img: "../assets/img/pierre_ame.png"
         }
     },
-    
     {
         id: 4,
-        coords: [48.857, 2.295],
-        question: "Énigme 4 : Quel monument en fer domine Paris ? (réponse : tour eiffel)",
+        coords: [41.9028, 12.4964], 
+        type: "clic",
+        question: "Énigme 4 : Là où tous les chemins mènent… Clique sur Rome pour obtenir la pierre.",
+        objet: {
+            nom: "Pierre du Pouvoir",
+            ordre: 6,
+            //img: "../assets/img/pierre_pouvoir.png"
+        }
+    },
+    {
+        id: 5,
+        coords: [48.857, 2.295], 
+        type: "texte",
+        question: "Énigme 5 : Quel monument en fer domine Paris ? (réponse : tour eiffel)",
         reponse: "tour eiffel",
         objet: {
-            nom: "Clé finale",
-            ordre: 6,
-            img: "../assets/img/clefinale.png"
+            nom: "Pierre de la Réalité",
+            ordre: 7,
+           // img: "../assets/img/pierre_realite.png"
         }
     }
 ];
