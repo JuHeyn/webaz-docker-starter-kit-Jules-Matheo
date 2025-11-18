@@ -13,15 +13,11 @@ let map = L.map('map', {
 let enigmes = [
     {
         id: 1,
-        coords: [48.853, 2.3498], 
+        coords: [48.853, 2.3498],
         type: "texte",
         question: "Énigme 1 : Quel monument célèbre se trouve ici ? (réponse : notre-dame)",
         reponse: "notre-dame",
-        objet: {
-            nom: "Pierre du Temps",
-            ordre: 3,
-           // img: "../assets/img/pierre_temps.png"
-        }
+        objet: { nom: "Pierre du Temps", ordre: 3, indice: "Chiffre = 2" }
     },
     {
         id: 2,
@@ -29,77 +25,35 @@ let enigmes = [
         type: "texte",
         question: "Énigme 2 : Quel musée célèbre est ici ? (réponse : louvre)",
         reponse: "louvre",
-        objet: {
-            nom: "Pierre de l’Espace",
-            ordre: 4,
-           // img: "../assets/img/pierre_espace.png"
-        }
+        objet: { nom: "Pierre de l’Espace", ordre: 4, indice: "Chiffre = 7" }
     },
     {
         id: 3,
-        coords: [48.8867, 2.3431], 
+        coords: [48.8867, 2.3431],
         type: "texte",
         question: "Énigme 3 : Quel quartier artistique est ici ? (réponse : montmartre)",
         reponse: "montmartre",
-        objet: {
-            nom: "Pierre de l’Âme",
-            ordre: 5,
-            //img: "../assets/img/pierre_ame.png"
-        }
+        objet: { nom: "Pierre de l’Âme", ordre: 5, indice: "Chiffre = 4" }
     },
     {
         id: 4,
-        coords: [41.9028, 12.4964], 
-        type: "clic",
-        question: "Énigme 4 : Là où tous les chemins mènent… Clique sur Rome pour obtenir la pierre.",
-        objet: {
-            nom: "Pierre du Pouvoir",
-            ordre: 6,
-            //img: "../assets/img/pierre_pouvoir.png"
-        }
+        coords: [48.857, 2.295],
+        type: "code4",
+        question: "Énigme 4 : Entrez le code révélé par les pierres (xxxx)",
+        reponse: "2749",
+        objet: { nom: "Pierre du Pouvoir", ordre: 6, indice: "Chiffre = 9" }
     },
     {
         id: 5,
-        coords: [48.857, 2.295], 
-        type: "texte",
-        question: "Énigme 5 : Quel monument en fer domine Paris ? (réponse : tour eiffel)",
-        reponse: "tour eiffel",
-        objet: {
-            nom: "Pierre de la Réalité",
-            ordre: 7,
-           // img: "../assets/img/pierre_realite.png"
-        }
+        coords: [48.8584, 2.2945],
+        type: "final",
+        question: "DERNIÈRE ÉNIGME : Vous ne pouvez obtenir le Gant que si vous possédez les 4 pierres.",
+        objet: { nom: "Gant de l’Infin… euh de Paris", ordre: 7, indice: "Objet final" }
     }
 ];
+let heatmap = L.tileLayer.wms("http://localhost:8080/geoserver/wms", {layers: 'Escape-game:objets', format: 'image/png', transparent: true, tiled: true, crs: L.CRS.EPSG4326});
+let layerControl = L.control.layers(null, {'Triche' : heatmap },{collapsed : false}).addTo(map);
 
-var heatmap = L.tileLayer.wms("http://localhost:8080/geoserver/wms", {layers: 'Escape-game:objets', format: 'image/png', transparent: true, tiled: true, crs: L.CRS.EPSG4326});
-var layerControl = L.control.layers(null, {'Triche' : heatmap },{collapsed : false}).addTo(map);
-
-
-enigmes.forEach(e => {
-    let marker = L.marker(e.coords).addTo(map);
-    if (e.type === "texte") {
-        marker.bindPopup(`
-            <b>ÉNIGME ${e.id}</b><br><br>
-            ${e.question}<br><br>
-            <input type="text" id="rep${e.id}" placeholder="Votre réponse"><br><br>
-            <button onclick="validerEnigme(${e.id})">Valider</button>
-        `);
-    }
-    if (e.type === "clic") {
-        marker.bindPopup(`
-            <b>ÉNIGME ${e.id}</b><br><br>
-            ${e.question}<br><br>
-            <i>Clique sur ce marqueur !</i>
-        `);
-
-        marker.on("click", () => {
-            alert("Bonne réponse ! Tous les chemins mènent à Rome 🇮🇹");
-            vm.ajouterObjet(e.objet);
-            map.closePopup();
-        });
-    }
-});
 
 let app = Vue.createApp({
   data() {
@@ -116,25 +70,28 @@ let app = Vue.createApp({
                 img : "../assets/img/carte.jpg"
             }
         ],
-        équipé : 1,
+        objetsTrouvés: [1,2],
+        enigmeActuelle: 1
         };
     },
-    computed: {
+        computed: {
         
     },
-    methods: {
-        équiper (objet) {
-            this.équipé = objet.ordre;
-        },
-        ajouterObjet(objet) {
-            if (this.objetsTrouvés.includes(objet.ordre)) return;
-
-            this.objets.push(objet);
-            this.objetsTrouvés.push(objet.ordre);
-
-            alert("💎 Vous obtenez : " + objet.nom);
-        }
-    },
+        methods: {
+            ajouterObjet(objet) {
+                if (!this.objetsTrouvés.includes(objet.ordre)) {
+                    this.objets.push(objet);
+                    this.objetsTrouvés.push(objet.ordre);
+                    alert("💎 Vous obtenez : " + objet.nom + " (" + objet.indice + ")");
+                }
+            },
+            peutObtenirGant() {
+                return this.objetsTrouvés.includes(3)
+                    && this.objetsTrouvés.includes(4)
+                    && this.objetsTrouvés.includes(5)
+                    && this.objetsTrouvés.includes(6);
+            }
+}
 }).mount('#inventaire');
 
 
