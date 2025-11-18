@@ -77,22 +77,86 @@ let app = Vue.createApp({
         computed: {
         
     },
-        methods: {
-            ajouterObjet(objet) {
-                if (!this.objetsTrouvés.includes(objet.ordre)) {
-                    this.objets.push(objet);
-                    this.objetsTrouvés.push(objet.ordre);
-                    alert("💎 Vous obtenez : " + objet.nom + " (" + objet.indice + ")");
-                }
-            },
-            peutObtenirGant() {
-                return this.objetsTrouvés.includes(3)
-                    && this.objetsTrouvés.includes(4)
-                    && this.objetsTrouvés.includes(5)
-                    && this.objetsTrouvés.includes(6);
+     methods:{
+        ajouterObjet(obj){
+            if(!this.objetsTrouves.includes(obj.ordre)){
+                this.objets.push(obj);
+                this.objetsTrouves.push(obj.ordre);
+                alert("💎 Objet obtenu : "+obj.nom+ (obj.indice?" (indice: "+obj.indice+")":""));
+            }
+        },
+
+
+        equiper(obj){ this.objetEquipe=obj; },
+
+
+        placerPierre(){
+            if(!this.objetEquipe){ alert("Équipez une pierre !"); return; }
+            let o=this.objetEquipe;
+            if(![3,4,5,6].includes(o.ordre)){ alert("Ce n'est pas une pierre !"); return; }
+            if(this.pierresPlacees.includes(o.ordre)){ alert("Déjà placée !"); return; }
+
+
+            this.pierresPlacees.push(o.ordre);
+            alert("Pierre placée : "+o.nom);
+
+
+            if(this.pierresPlacees.length===4){
+                alert("🧤 Toutes les pierres sont placées ! Vous recevez le Gant.");
+                this.ajouterObjet({nom:"Gant de l'Infini", ordre:7});
+            }
             }
 }
 }).mount('#inventaire');
 
 
 
+function validerEnigme(id){
+    let e = enigmes.find(x=>x.id===id);
+    let rep = document.getElementById("rep"+id).value.trim().toLowerCase();
+    if(rep===e.reponse){
+        alert("Correct !");
+        vm.ajouterObjet(e.objet);
+        map.closePopup();
+    } 
+    else alert("Mauvaise réponse.");
+}
+
+
+function validerCode(id){
+    let e = enigmes.find(x=>x.id===id);
+    let rep = document.getElementById("code"+id).value.trim();
+    if(rep===e.reponse){
+        alert("Code correct !");
+        vm.ajouterObjet(e.objet);
+        map.closePopup();
+    } 
+    else alert("Code incorrect.");
+}
+
+
+enigmes.forEach(e=>{
+let m = L.marker(e.coords).addTo(map);
+
+
+if(e.type==="texte"){
+    m.bindPopup(`
+        <b>Énigme ${e.id}</b><br><br>${e.question}<br><br>
+        <input id="rep${e.id}" placeholder="Réponse"><br><br>
+        <button onclick="validerEnigme(${e.id})">Valider</button>
+    `);
+    }
+    if(e.type==="code4"){
+        m.bindPopup(`
+            <b>Énigme ${e.id}</b><br><br>${e.question}<br><br>
+            <input id="code${e.id}" placeholder="4 chiffres"><br><br>
+            <button onclick="validerCode(${e.id})">Valider</button>
+        `);
+    }
+    if(e.type==="final"){
+        m.bindPopup(`
+            <b>Énigme Finale</b><br><br>${e.question}<br><br>
+            <button onclick="vm.placerPierre()">Placer la pierre équipée</button>
+        `);
+}
+})
