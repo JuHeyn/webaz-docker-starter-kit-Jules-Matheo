@@ -11,6 +11,8 @@ let map = L.map('map', {
     ],
 });
 
+let couchesObjets = L.layerGroup().addTo(map);
+
 // ################# HeatMap ################
 
 var heatmap = L.tileLayer.wms("http://localhost:8080/geoserver/wms", {layers: 'Escape-game:objets', format: 'image/png', transparent: true, tiled: true, crs: L.CRS.EPSG4326});
@@ -24,24 +26,17 @@ let app = Vue.createApp({
         debut : new Date(),
         intervalle : '00:00:00',
         pseudo : document.getElementById('pseudo'),
-        objets : [
-            {
-                nom : 'Clé',
-                id : 1,
-                img : "../assets/img/cle.png"
-            },
-            {
-                nom : 'Carte',
-                id : 2,
-                img : "../assets/img/carte.jpg"
-            }
-        ],
+        objets : [],
+        objetsCarte : [],
         équipé : {},
         };
+   
     },
-    computed: {
-        
+
+    mounted() {
+        this.chargerObjets();
     },
+
     methods: {
         horloge(){
             let actuel = new Date();
@@ -60,9 +55,77 @@ let app = Vue.createApp({
         équiper (objet) {
             this.équipé = objet;
             console.log("Objet équipé : " + this.équipé.nom)
-        }
-        
-    },
-}).mount('#inventaire');
+        },
+
+        ajouterObjet(objet) {
+                this.objets.push(objet);
+        },  
+
+        suppObjetCarte(objet) {
+            this.objetsCarte = this.objetsCarte.filter(o => o.id !== objet.id);
+        },
+
+        chargerObjets() {
+            fetch('/api/objets')
+                .then(response => response.json())
+                .then(data => {
+                    this.objets = data;
+                    this.afficherObjetsSurCarte();
+                    console.log("objets chargés :", this.objets);
+                })
+
+        },
+
+        chargerObjetSuivant(id) {
+            fetch('/api/objets?id=' + id)
+                .then(response => response.json())
+                .then(data => {
+                    this.objets = data;
+                    this.afficherObjetsSurCarte();
+     
+                    console.log("objet suivant", obj.nom);
+                })
+        },    
+
+        afficherObjetsSurCarte() {
+                
+            couchesObjets.clearLayers();
+
+            this.objets.forEach(obj => {
+
+                let geom = JSON.parse(obj.geom_wkt);
+                
+                let icone = L.icon({
+                    iconUrl: obj.image,
+                    iconSize: [48, 48],
+                    iconAnchor: [24, 24],
+                    popupAnchor: [0, -25]
+                });
+
+                let couche = L.geoJSON(geom, {
+                    pointToLayer: (feature, latlng) => {
+                        let mark = L.marker(latlng, { icon: icone });
+                        mark.on('click', () => {
+                            this.ajouterObjet(obj);
+                            this.suppObjetCarte(obj);
+                            map.removeLayer(mark);
+                            console.log("Objet ramassé :", obj.nom);
+                            this.chargerObjetSuivant(obj.obj_apres);
+                        });
+                        return mark;
+                    }
+                })
+
+                couchesObjets.addLayer(couche);
+            });
+        },
+
+
+
+
+
+
+    }
+    }).mount('#inventaire');
 
 var intervalID = setInterval(app.horloge, 1000);
