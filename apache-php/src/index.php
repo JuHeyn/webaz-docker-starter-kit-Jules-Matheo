@@ -24,9 +24,9 @@ Flight::route('GET /api/objets', function() {
     
     if (isset($_GET["id"])) {
         $id = $_GET["id"];
-        $sql = "SELECT  id, nom, indice, image, min_zoom, depart, obj_avant, code,ST_AsGeoJSON(geom) AS geom_wkt FROM objets WHERE id = {$id}"; 
+        $sql = "SELECT  id, nom, image, min_zoom, depart, obj_avant, code,ST_AsGeoJSON(geom) AS geom_wkt FROM objets WHERE id = {$id}"; 
     } else {
-        $sql = "SELECT  id, nom, indice, image, min_zoom, depart, obj_avant, code,ST_AsGeoJSON(geom) AS geom_wkt FROM objets WHERE depart"; 
+        $sql = "SELECT  id, nom, image, min_zoom, depart, obj_avant, code,ST_AsGeoJSON(geom) AS geom_wkt FROM objets WHERE depart"; 
     }
     
     $reponse = pg_query($link, $sql);

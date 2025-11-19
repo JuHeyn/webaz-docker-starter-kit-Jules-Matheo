@@ -61,6 +61,7 @@ let app = Vue.createApp({
             this.équipé = objet;
             console.log("Objet équipé : " + this.équipé.nom)
         }
+        
     },
 }).mount('#inventaire');
 
