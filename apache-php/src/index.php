@@ -24,9 +24,9 @@ Flight::route('GET /api/objets', function() {
     
     if (isset($_GET["id"])) {
         $id = $_GET["id"];
-        $sql = "SELECT  id, nom, image, min_zoom, depart, obj_avant, code,ST_AsGeoJSON(geom) AS geom_wkt FROM objets WHERE id = {$id}"; 
+        $sql = "SELECT  id, nom, image, min_zoom, depart, obj_apres, code,ST_AsGeoJSON(geom) AS geom_wkt FROM objets WHERE id = {$id}"; 
     } else {
-        $sql = "SELECT  id, nom, image, min_zoom, depart, obj_avant, code,ST_AsGeoJSON(geom) AS geom_wkt FROM objets WHERE depart"; 
+        $sql = "SELECT  id, nom, image, min_zoom, depart, obj_apres, code,ST_AsGeoJSON(geom) AS geom_wkt FROM objets WHERE depart"; 
     }
     
     $reponse = pg_query($link, $sql);
@@ -36,7 +36,7 @@ Flight::route('GET /api/objets', function() {
         $ligne["id"] = (int)$ligne["id"];
         $ligne["min_zoom"] = (int)$ligne["min_zoom"];
         $ligne["depart"] = (bool)$ligne["depart"];
-        $ligne["obj_avant"] = (int)$ligne["obj_avant"];
+        $ligne["obj_apres"] = (int)$ligne["obj_apres"];
         $resultat[] = $ligne;
     }
     Flight::json($resultat);
