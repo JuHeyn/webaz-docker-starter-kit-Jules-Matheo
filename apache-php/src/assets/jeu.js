@@ -52,13 +52,22 @@ let app = Vue.createApp({
             this.intervalle = h + ":" + m + ":" + s;
         },
 
+        adresseImage(chemin) {
+            return "../assets/img/" + chemin
+        },
+
         équiper (objet) {
-            this.équipé = objet;
-            console.log("Objet équipé : " + this.équipé.nom)
+            if (objet.id == this.équipé.id) {
+                this.équipé = {nom : null, id: -1};
+                console.log("Pas d'objet équipé");
+            } else {
+                this.équipé = objet;
+                console.log("Objet équipé : " + this.équipé.nom);
+            }
         },
 
         ajouterObjet(objet) {
-                this.objets.push(objet);
+            this.objets.push(objet);
         },  
 
         suppObjetCarte(objet) {
@@ -68,8 +77,8 @@ let app = Vue.createApp({
         chargerObjets() {
             fetch('/api/objets')
                 .then(response => response.json())
-                .then(data => {
-                    this.objets = data;
+                .then(obj => {
+                    this.objetsCarte = obj;
                     this.afficherObjetsSurCarte();
                     console.log("objets chargés :", this.objets);
                 })
@@ -79,24 +88,24 @@ let app = Vue.createApp({
         chargerObjetSuivant(id) {
             fetch('/api/objets?id=' + id)
                 .then(response => response.json())
-                .then(data => {
-                    this.objets = data;
+                .then(obj => {
+                    this.objetsCarte = obj;
                     this.afficherObjetsSurCarte();
      
-                    console.log("objet suivant", obj.nom);
-                })
+                    console.log("objet suivant :", obj[0].nom);
+                });
         },    
 
         afficherObjetsSurCarte() {
                 
             couchesObjets.clearLayers();
 
-            this.objets.forEach(obj => {
+            this.objetsCarte.forEach(obj => {
 
                 let geom = JSON.parse(obj.geom_wkt);
                 
                 let icone = L.icon({
-                    iconUrl: obj.image,
+                    iconUrl: this.adresseImage(obj.image),
                     iconSize: [48, 48],
                     iconAnchor: [24, 24],
                     popupAnchor: [0, -25]

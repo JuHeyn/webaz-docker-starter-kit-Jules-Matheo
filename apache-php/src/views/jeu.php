@@ -10,16 +10,16 @@
     <div id="map">
     </div>
 
-    <div id="inventaire">
+    <div id="inventaire" >
         <div class="mx-auto p-2">
             <p id="temps">{{ intervalle }}</p>
             <p id="pseudo"><?= $_POST['pseudo'] ?></p>
         </div>
         <div id="liste" class="mx-auto p-2">
-            <div v-for="objet in objets" class="objets" :id="objet.ordre" v-on:click="équiper(objet)"> 
-                <p v-if="objet.ordre == équipé" id="selectionné">{{ objet.nom }}</p>
+            <div v-for="objet in objets" class="objets" :id="objet.id" v-on:click="équiper(objet)"> 
+                <p v-if="objet.id == équipé.id" id="selectionné">{{ objet.nom }}</p>
                 <p v-else>{{ objet.nom }}</p>
-                <img :src="objet.img">
+                <img :src="adresseImage(objet.image)" :alt="objet.nom">
             </div>
         </div>
     </div>
