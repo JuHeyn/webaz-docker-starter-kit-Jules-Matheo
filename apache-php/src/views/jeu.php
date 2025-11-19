@@ -9,13 +9,22 @@
 </head>
 
 <body>
+    <?php
+        $_POST['pseudo']
+    ?>
     <div id="map"></div>
     <div id="inventaire">
+        <div class="mx-auto p-2">
+            <p id="temps">{{ heureActuelle }}</p>
+            <p id="pseudo"><?= $_POST['pseudo'] ?></p>
+        </div>
+        {{pseudo}}
         <div id="liste" class="mx-auto p-2">
-            <div v-for="objet in objets" class="objets" :id="objet.ordre" v-on:click="équiper(objet)">
+            <div v-for="objet in objets" class="objets" :id="objet.ordre" v-on:click="equiper(objet)">
                 <p v-if="objet.ordre == équipé" id="selectionné">{{ objet.nom }}</p>
                 <p v-else>{{ objet.nom }}</p>
                 <img :src="objet.img" alt="objet">
+
             </div>
         </div>
     </div>

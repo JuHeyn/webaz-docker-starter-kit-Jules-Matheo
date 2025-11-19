@@ -34,6 +34,7 @@ let enigmes = [
 let vm = Vue.createApp({
   data() {
     return {
+<<<<<<< Updated upstream
       objets: [
         { nom: 'Clé', ordre: 1, img: "../assets/img/cle.png" },
         { nom: 'Carte', ordre: 2, img: "../assets/img/carte.jpg" }
@@ -61,6 +62,26 @@ let vm = Vue.createApp({
         // après ajout d'objet, on (re)prépare l'inventaire draggable dans le DOM
         this.$nextTick(preparerDragSurObjets);
       }
+=======
+        debut : new Date(),
+        heureActuelle : '00:00:00',
+        pseudo : document.getElementById('pseudo'),
+        objets : [
+            {
+                nom : 'Clé',
+                ordre : 1,
+                img : "../assets/img/cle.png"
+            },
+            {
+                nom : 'Carte',
+                ordre : 2,
+                img : "../assets/img/carte.jpg"
+            }
+        ],
+        objetsTrouves: [1,2],
+        enigmeActuelle: 1
+        };
+>>>>>>> Stashed changes
     },
 
     /**** Méthode appelée depuis ton HTML : équiper(objet) ****/
@@ -71,6 +92,7 @@ let vm = Vue.createApp({
       // feedback visuel
       // console.log("Équipé :", objet.nom);
     },
+<<<<<<< Updated upstream
 
     /**** Drag start: utile si tu veux lier au drag natif via Vue ****/
     startDrag(ev, objet) {
@@ -91,6 +113,37 @@ let vm = Vue.createApp({
         alert("Aucun objet transféré. Assurez-vous de glisser depuis l'inventaire.");
         return;
     }
+=======
+     methods:{
+        horloge(){
+            let actuel = new Date();
+            let deltaSec = Math.floor((actuel - this.debut)/1000);
+            let h = Math.floor(deltaSec / 3600);
+            let m = Math.floor((deltaSec - h * 3600) / 60);
+            let s = deltaSec - h*3600 - m*60 ;
+
+            h = (h < 10) ? "0" + h : h;
+            m = (m < 10) ? "0" + m : m;
+            s = (s < 10) ? "0" + s : s;
+
+            this.heureActuelle = h + ":" + m + ":" + s;
+
+        },
+
+        ajouterObjet(obj){
+            if(!this.objetsTrouves.includes(obj.ordre)){
+                this.objets.push(obj);
+                this.objetsTrouves.push(obj.ordre);
+                alert("💎 Objet obtenu : "+obj.nom+ (obj.indice?" (indice: "+obj.indice+")":""));
+
+            }
+        },
+
+        equiper(obj){ 
+            this.objetEquipe=obj;
+            console.log("objet équipé : " + obj.nom)
+        },
+>>>>>>> Stashed changes
 
     let objet = null;
     try { objet = JSON.parse(raw); } catch (err) { objet = null; }
@@ -114,6 +167,7 @@ let vm = Vue.createApp({
         return;
     }
 
+<<<<<<< Updated upstream
     // Retirer la pierre de l'inventaire si elle y est
     let index = this.objets.findIndex(o => o.ordre === objet.ordre);
     if (index !== -1) {
@@ -213,6 +267,38 @@ function mettreAJourVisibiliteMarkers() {
     else
       map.removeLayer(m.marker);
   });
+=======
+            if(this.pierresPlacees.length===4){
+                alert("🧤 Toutes les pierres sont placées ! Vous recevez le Gant.");
+                this.ajouterObjet({nom:"Gant de l'Infini", ordre:7});
+            }
+        },
+        
+        validerEnigme(id){
+            let e = enigmes.find(x=>x.id===id);
+            let rep = document.getElementById("rep"+id).value.trim().toLowerCase();
+            if(rep===e.reponse) {
+                // alert("Correct !");
+                console.log("correct");
+                this.ajouterObjet(e.objet);
+                map.closePopup();
+            } 
+            else alert("Mauvaise réponse.");
+        }
+}
+}).mount('#inventaire');
+
+
+function validerCode(id){
+    let e = enigmes.find(x=>x.id===id);
+    let rep = document.getElementById("code"+id).value.trim();
+    if(rep===e.reponse){
+        alert("Code correct !");
+        app.ajouterObjet(e.objet);
+        map.closePopup();
+    } 
+    else alert("Code incorrect.");
+>>>>>>> Stashed changes
 }
 
 
@@ -226,6 +312,7 @@ enigmes.forEach(e => {
 
   if (e.type === "texte") {
     m.bindPopup(`
+<<<<<<< Updated upstream
       <b>Énigme ${e.id}</b><br><br>
       ${e.question}<br><br>
       <input id="rep${e.id}" placeholder="Réponse"><br><br>
@@ -312,3 +399,26 @@ function preparerDragSurObjets() {
 
 // appel initial si Vue a déjà rendu (si pas encore, mounted() s'en occupe)
 setTimeout(preparerDragSurObjets, 300);
+=======
+        <b>Énigme ${e.id}</b><br><br>${e.question}<br><br>
+        <input id="rep${e.id}" placeholder="Réponse"><br><br>
+        <button onclick="app.validerEnigme(${e.id})">Valider</button>
+    `);
+    }
+    if(e.type==="code4"){
+        m.bindPopup(`
+            <b>Énigme ${e.id}</b><br><br>${e.question}<br><br>
+            <input id="code${e.id}" placeholder="4 chiffres"><br><br>
+            <button onclick="validerCode(${e.id})">Valider</button>
+        `);
+    }
+    if(e.type==="final"){
+        m.bindPopup(`
+            <b>Énigme Finale</b><br><br>${e.question}<br><br>
+            <button onclick="app.placerPierre()">Placer la pierre équipée</button>
+        `);
+}
+})
+
+var intervalID = setInterval(app.horloge, 1000);
+>>>>>>> Stashed changes
