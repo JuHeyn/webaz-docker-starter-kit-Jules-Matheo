@@ -7,9 +7,11 @@ body {
 #map {
     height: 100vh;
     margin: 0;
+    z-index: 0;
 }
 
 #inventaire {
+    z-index: 1000;
     position: absolute;
     right: 0;
     top: 0;
