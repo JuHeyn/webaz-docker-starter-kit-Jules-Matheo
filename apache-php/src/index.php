@@ -4,24 +4,41 @@ declare(strict_types=1);
 
 require_once 'flight/Flight.php';
 
+$host = 'db';
+$port = 5432;
+$dbname = 'mydb';
+$user = 'postgres';
+$pass = 'postgres';
+
+// Connexion BDD
+$link = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$pass");
+Flight::set('db_link', $link);
+
 Flight::route('/', function() {
-    Flight::render('accueil');
+    Flight::render('accueil', ["link" => Flight::get('db_link')]);
 });
+
+Flight::route('GET /score', function() {
+    $link = Flight::get('db_link');
+
+    pg_query_params($link, "INSERT INTO score (nom, temps) VALUES ( $1, $2 )", [$_GET['pseudo'], $_GET['score']]);
+});
+
+// Flight::route('GET /score', function() {
+//     $link = Flight::get('db_link');
+//     $sql = "SELECT * FROM score ORDER BY temps";
+//     $reponse = pg_query($link, $sql);
+//     $resultats = pg_fetch_all($reponse);
+//     Flight::json($resultats);
+// });
 
 Flight::route('/jeu', function() {
     Flight::render('jeu');
 });
 
 Flight::route('GET /api/objets', function() {
-    $host = 'db';
-    $port = 5432;
-    $dbname = 'mydb';
-    $user = 'postgres';
-    $pass = 'postgres';
+    $link = Flight::get('db_link');
 
-    // Connexion BDD
-    $link = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$pass");
-    
     if (isset($_GET["id"])) {
         $id = $_GET["id"];
         $sql = "SELECT  id, nom, image, min_zoom, depart, obj_apres, code,ST_AsGeoJSON(geom) AS geom_wkt FROM objets WHERE id = {$id}"; 
@@ -42,21 +59,21 @@ Flight::route('GET /api/objets', function() {
     Flight::json($resultat);
 });
 
-Flight::route('/test-db', function () {
-    $host = 'db';
-    $port = 5432;
-    $dbname = 'mydb';
-    $user = 'postgres';
-    $pass = 'postgres';
+// Flight::route('/test-db', function () {
+//     $host = 'db';
+//     $port = 5432;
+//     $dbname = 'mydb';
+//     $user = 'postgres';
+//     $pass = 'postgres';
 
-    // Connexion BDD
-    $link = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$pass");
+//     // Connexion BDD
+//     $link = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$pass");
 
-    $sql = "SELECT * FROM points";
-    $query = pg_query($link, $sql);
-    $results = pg_fetch_all($query);
-    Flight::json($results);
-});
+//     $sql = "SELECT * FROM points";
+//     $query = pg_query($link, $sql);
+//     $results = pg_fetch_all($query);
+//     Flight::json($results);
+// });
 
 Flight::start();
 

@@ -23,7 +23,7 @@ INSERT INTO objets (id, nom, image, min_zoom, depart, obj_apres, code, geom) VAL
 (5, 'Coffre qui necessite pierres', 'coffre.jpg', 2, False, 6, null, ST_SetSRID(ST_MakePoint(2.298507655860395, 48.85578060681327), 4326)),
 (6, 'Code a 4 chiffres', 'code_4_chiffres.jpg', 2, False, 7, null, ST_SetSRID(ST_MakePoint(2.298507655860395, 48.85578060681327), 4326)),
 (7, 'Coffre qui necessite code a 4 chiffres', 'coffre.jpg', 2, False, 8, '0369', ST_SetSRID(ST_MakePoint(2.294435404975033, 48.85847053148979), 4326)),
-(8, 'Gant', 'gant.png', 2, False, null, null, ST_SetSRID(ST_MakePoint(2.294435404975033, 48.85847053148979), 4326));
+(8, 'Gant', 'gant.png', 2, False, -1, null, ST_SetSRID(ST_MakePoint(2.294435404975033, 48.85847053148979), 4326));
 
 
 -- ###############################################""

@@ -25,7 +25,6 @@ let app = Vue.createApp({
     return {
         debut : new Date(),
         intervalle : '00:00:00',
-        pseudo : document.getElementById('pseudo'),
         objets : [],
         objetsCarte : [],
         équipé : {},
@@ -35,10 +34,15 @@ let app = Vue.createApp({
 
     mounted() {
         this.chargerObjets();
+        this.chargerPseudo();
     },
 
     methods: {
-        horloge(){
+        chargerPseudo() {
+            this.pseudo = document.getElementById('pseudo').innerText;
+        },
+
+        horloge() {
             let actuel = new Date();
             let deltaSec = Math.floor((actuel - this.debut)/1000);
             let h = Math.floor(deltaSec / 3600);
@@ -119,7 +123,11 @@ let app = Vue.createApp({
                             this.suppObjetCarte(obj);
                             map.removeLayer(mark);
                             console.log("Objet ramassé :", obj.nom);
-                            this.chargerObjetSuivant(obj.obj_apres);
+                            if (obj.obj_apres == -1) {
+                                finDuJeu(app.pseudo, app.intervalle);
+                            } else {
+                                this.chargerObjetSuivant(obj.obj_apres);
+                            }
                         });
                         return mark;
                     }
@@ -138,3 +146,14 @@ let app = Vue.createApp({
     }).mount('#inventaire');
 
 var intervalID = setInterval(app.horloge, 1000);
+var panneauFin = document.getElementById('fin');
+panneauFin.style.display = 'none';
+
+function finDuJeu(pseudo, intervalle) {
+    panneauFin.style.display = 'block';
+    let score = intervalle.split(":");
+    document.getElementById('score').innerText = score[1] + " min " + score[2] + " sec";
+    fetch('../score?pseudo=' + pseudo + "&score=" + intervalle);
+    clearInterval(intervalID);
+    intervalID = null;
+}
