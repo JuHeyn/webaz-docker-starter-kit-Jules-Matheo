@@ -14,7 +14,7 @@ let map = L.map('map', {
 let couchesObjets = L.layerGroup().addTo(map);
 
 map.on('zoomend', () => {
-    app.afficherObjetsSurCarte();
+    app.afficherObjetSurCarte();
 });
 
 // ################# HeatMap ################
@@ -30,7 +30,7 @@ let app = Vue.createApp({
         debut : new Date(),
         intervalle : '00:00:00',
         objets : [],
-        objetsCarte : [],
+        objetCarte : [],
         équipé : {},
         };
    
@@ -78,27 +78,31 @@ let app = Vue.createApp({
             this.objets.push(objet);
         },  
 
-        suppObjetCarte(objet) {
-            this.objetsCarte = this.objetsCarte.filter(o => o.id !== objet.id);
+        suppObjetCarte() {
+            this.objetCarte = null;
         },
 
         chargerObjets() {
             fetch('/api/objets')
                 .then(response => response.json())
                 .then(obj => {
-                    this.objetsCarte = obj;
-                    this.objetsCarte.forEach(obj => {
-                        if (obj.code) {
-                            if (obj.code[0] == "1") {
-                                let requis = [] ;
-                                obj.code.substring(2).split(";").forEach(pierre_str => requis.push(Number(pierre_str)));
-                                obj.restant = requis;
-                            
-                            }
+                    this.objetCarte = obj[0];
+
+                    if (this.objetCarte.code) {
+
+                        fetch('/api/enigme?id=' + this.objetCarte.id)
+                                .then(response => response.json)
+                                .then(eng => this.objetCarte.enigme = eng);
+
+                        if (!this.objetCarte.enigme.saisie) {
+                            let requis = [] ;
+                            this.objetCarte.enigme.reponse.split(";").forEach(pierre_str => requis.push(Number(pierre_str)));
+                            this.objetCarte.restant = requis;
+                        
                         }
-                    });
-                    this.afficherObjetsSurCarte();
-                    console.log("objets chargés :", this.objetsCarte);
+                    };
+                    this.afficherObjetSurCarte();
+                    console.log("objets chargés :", this.objetCarte.nom);
                     nouvelleQuete("Il parait qu'une pierre se trouve sur le parvis d'une église située sur une ile de la capitale...");
                 })
 
@@ -108,139 +112,126 @@ let app = Vue.createApp({
             fetch('/api/objets?id=' + id)
                 .then(response => response.json())
                 .then(obj => {
-                    this.objetsCarte = obj;
-                    this.objetsCarte.forEach(obj => {
-                        if (obj.code) {
-                            if (obj.code[0] == "1") {
-                                let requis = [] ;
-                                obj.code.substring(2).split(";").forEach(pierre_str => requis.push(Number(pierre_str)));
-                                obj.restant = requis;
-                            }
-                        }
-                    });
+                    this.objetCarte = obj[0];
+                    if (this.objetCarte.code) {
 
-                    this.afficherObjetsSurCarte();
+                        fetch('/api/enigme?id=' + this.objetCarte.id)
+                                .then(response => response.json())
+                                .then(eng => {
+                                    this.objetCarte.enigme = eng[0];
+                                    if (!this.objetCarte.enigme.saisie) {
+                                        let requis = [] ;
+                                        this.objetCarte.enigme.reponse.split(";").forEach(pierre_str => requis.push(Number(pierre_str)));
+                                        this.objetCarte.restant = requis;
+                                    }
+                                })
 
-                    console.log("objet suivant :", obj[0].nom);
+                        
+                    };
+
+                    this.afficherObjetSurCarte();
+
+                    console.log("objet suivant :", this.objetCarte.nom);
                 });
         },    
 
-        afficherObjetsSurCarte() {
+        afficherObjetSurCarte() {
                 
             couchesObjets.clearLayers();
 
-            this.objetsCarte.forEach(obj => {
+            let zoom_actuel = map.getZoom();
+            let nb_zoom_min = Number(this.objetCarte.min_zoom);
 
-                let zoom_actuel = map.getZoom();
-                let nb_zoom_min = Number(obj.min_zoom);
+            if ( zoom_actuel < nb_zoom_min) {
+                return;
+            }
 
-                console.log(zoom_actuel);
-                if ( zoom_actuel < nb_zoom_min) {
-                    return;
-                }
+            let geom = JSON.parse(this.objetCarte.geom_wkt);
+            
+            let icone = L.icon({
+                iconUrl: this.adresseImage(this.objetCarte.image),
+                iconSize: [48, 48],
+                iconAnchor: [24, 24],
+                popupAnchor: [0, -25]
+            });
 
-                let geom = JSON.parse(obj.geom_wkt);
-                
-                let icone = L.icon({
-                    iconUrl: this.adresseImage(obj.image),
-                    iconSize: [48, 48],
-                    iconAnchor: [24, 24],
-                    popupAnchor: [0, -25]
-                });
+            let couche = L.geoJSON(geom, {
+                pointToLayer: (feature, latlng) => {
+                    let mark = L.marker(latlng, { icon: icone });
+                    mark.on('click', () => {
+                        
+                        if (this.objetCarte.code) {
 
-                let couche = L.geoJSON(geom, {
-                    pointToLayer: (feature, latlng) => {
-                        let mark = L.marker(latlng, { icon: icone });
-                        mark.on('click', () => {
-                            
-                            if (obj.code) {
-                                if (obj.code[0] == "0") {
-                                    let alert_code = {
-                                        1:"Le coffre est verouillé mais le mot de passe pour l'ouvrir est le nom du musée sur lequel tu te trouves :",
-                                        7:"Le coffre est verouillé par le code a 4 chhiffres que tu viens de récupérer :",
-                                    }
-                                    let prompt_msg = alert_code[obj.id];
-                                    let reponse = prompt(prompt_msg);
+                            if (this.objetCarte.enigme.saisie) {
 
-                                    if (obj.code.substring(2).toUpperCase().split(';').includes(reponse.toUpperCase())) {
-                                        alert("Code correct ! Tu peux ramasser l'objet.");    
-                                    } else {
-                                        alert("Mauvais code ! Réessaie plus tard.");
-                                        return;
-                                    }
+                                let reponse = prompt(this.objetCarte.enigme.question);
 
-                                } else if (obj.code[0] == "1") {
+                                if (this.objetCarte.enigme.reponse.toUpperCase().split(';').includes(reponse.toUpperCase())) {
+                                    alert("Code correct ! Tu peux ramasser l'objet.");    
+                                } else {
+                                    alert("Mauvais code ! Réessaie plus tard.");
+                                    return;
+                                }
+
+                            } else {
+                                
+                                if (!this.équipé.nom) {
+
+                                    alert("Tu n'as pas d'objet équipé.");
+                                    return ;
+
+                                } else if (this.objetCarte.restant.includes(this.équipé.id)) {
+
+                                    this.objetCarte.restant = this.objetCarte.restant.filter(n => n !== this.équipé.id );
                                     
-                            
-                                    if (!this.équipé.nom) {
+                                    this.objets = this.objets.filter(o => o.id !== this.équipé.id); // Supprimer l'objet de l'inventaire
 
-                                        alert("Tu n'as pas d'objet équipé.");
-                                        return ;
+                                    alert("Tu as posé la " + this.équipé.nom + " sur le coffre.");
 
-                                    } else if (obj.restant.includes(this.équipé.id)) {
-
-                                        obj.restant = obj.restant.filter(n => n !== this.équipé.id );
-                                        
-                                        this.objets = this.objets.filter(o => o.id !== this.équipé.id); // Supprimer l'objet de l'inventaire
-
-                                        alert("Tu as posé la " + this.équipé.nom + " sur le coffre.");
-
-                                        if (obj.restant.length == 0) {
-                                            alert("Tu as ouvert le coffre !")
-                                        } else {
-                                            alert("Pour ouvrir ce coffre, il te reste " + obj.restant.length + " pierres à poser");
-                                            this.équipé = {nom : null, id: -1};
-                                            return ;
-                                        }
-
+                                    if (this.objetCarte.restant.length == 0) {
+                                        alert("Tu as ouvert le coffre !")
                                     } else {
-
-                                        alert("Il faut placer uniquement les pierres pour ouvrir le coffre !")
-                                        return ; 
-
+                                        alert("Pour ouvrir ce coffre, il te reste " + this.objetCarte.restant.length + " pierres à poser");
+                                        this.équipé = {nom : null, id: -1};
+                                        return ;
                                     }
+
+                                } else {
+
+                                    alert("Il faut placer uniquement les pierres pour ouvrir le coffre !")
+                                    return ; 
+
                                 }
                             }
-                            
-                            let message_obj = {
-                                0: "Maintenant, rendez-vous au musée le plus proche pour continuer votre quête.",
-                                2: "Maintenant, rendez-vous au quartier artistique plus au Nord.",
-                                3: "Maintenant, rendez-vous au grand parc qui se trouve à l'Ouest de là ou tu te trouves.",
-                                4: "Maintenant, tes 4 pierres pourrons ouvrir le coffre qui se trouve du côté des Trocadéros.",
-                                6: "Maintenant, avec ce code tu pourras ouvrir le coffre qui se trouve à deux pas d'ici au symbole même de Paris.",
-                                8: "Tu as tous les pouvoirs entre tes mains pour sauver le monde.",
-                            }
+                        }
+                        
+                        if (this.objetCarte.indice) {
+                            nouvelleQuete(this.objetCarte.indice, this.objetCarte.nom);
+                        }
 
-                            if (obj.id in message_obj) {
-                                nouvelleQuete(message_obj[obj.id], obj.nom);
-                            }
+                        
+                        if (!this.objetCarte.enigme){
+                            this.ajouterObjet(this.objetCarte);
+                        }
 
-                            
-                            if (obj.id in message_obj){
-                                this.ajouterObjet(obj);
-                            }
-                            
-                            this.suppObjetCarte(obj);
-                            map.removeLayer(mark);
-                            console.log("Objet ramassé :", obj.nom);
-                            if (obj.obj_apres == -1) {
-                                finDuJeu(app.pseudo, app.intervalle);
-                            } else {
-                                this.chargerObjetSuivant(obj.obj_apres);
-                            }
-                        });
-                        return mark;
-                    }
-                })
+                        map.removeLayer(mark);
+                        console.log("Objet ramassé :", this.objetCarte.nom);
 
-                couchesObjets.addLayer(couche);
-            });
+                        let prochainObjet = this.objetCarte.obj_apres;
+                        this.suppObjetCarte();
+                        if (prochainObjet == -1) {
+                            finDuJeu(app.pseudo, app.intervalle);
+                        } else {
+                            this.chargerObjetSuivant(prochainObjet);
+
+                        }
+                    });
+                    return mark;
+                }
+            })
+
+            couchesObjets.addLayer(couche);
         },
-
-
-
-
-
 
     }
     }).mount('#inventaire');
