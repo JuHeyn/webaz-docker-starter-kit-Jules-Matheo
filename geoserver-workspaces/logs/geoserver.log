@@ -1,0 +1,4257 @@
+CONFIG 2025-11-21 19:09:12,388 [main][Log4J2Logger.java:211] : Logging policy: Log4J2
+CONFIG 2025-11-21 19:09:12,568 [main][Log4J2Logger.java:185] : Factory implementations for category GridCoverageFactory:
+  org.geotools.coverage.grid.GridCoverageFactory
+CONFIG 2025-11-21 19:09:12,767 [main][Log4J2Logger.java:185] : Factory implementations for category FilterFactory:
+  org.geotools.filter.FilterFactoryImpl
+CONFIG 2025-11-21 19:09:12,783 [main][Log4J2Logger.java:185] : Factory implementations for category StyleFactory:
+  org.geotools.styling.StyleFactoryImpl
+CONFIG 2025-11-21 19:09:12,787 [main][Log4J2Logger.java:185] : Factory implementations for category FeatureFactory:
+  org.geotools.feature.LenientFeatureFactoryImpl
+  org.geotools.feature.ValidatingFeatureFactoryImpl
+DEBUG 2025-11-21 19:09:13,203 [main][Log4J2Logger.java:216] : Extension lookup 'XStreamPersisterInitializer', prior to bean geoserverExtensions initialisation.
+DEBUG 2025-11-21 19:09:13,204 [main][Log4J2Logger.java:216] : Extension lookup 'ExtensionFilter', prior to bean geoserverExtensions initialisation.
+DEBUG 2025-11-21 19:09:13,208 [main][Log4J2Logger.java:216] : Extension lookup 'ExtensionProvider', but provided ApplicationContext is unset.
+DEBUG 2025-11-21 19:09:13,209 [main][Log4J2Logger.java:216] : Extension lookup 'ExtensionFilter', but provided ApplicationContext is unset.
+DEBUG 2025-11-21 19:09:13,238 [main][Log4J2Logger.java:216] : CONFIGURING GEOSERVER LOGGING -------------------------
+21 Nov 19:09:13 CONFIG [geoserver.logging] - Log4j 2 configuration set to DEFAULT_LOGGING.xml
+21 Nov 19:09:15 CONFIG [org.geoserver] - GeoServer configuration lock is enabled
+21 Nov 19:09:16 CONFIG [geoserver.config] - Loading catalog /opt/geoserver/data_dir
+21 Nov 19:09:16 CONFIG [config.datadir] - Catalog and configuration loader uses 12 threads out of 12 available cores.
+21 Nov 19:09:16 CONFIG [config.datadir] - Loaded style generic
+21 Nov 19:09:16 CONFIG [config.datadir] - Loaded style line
+21 Nov 19:09:16 CONFIG [config.datadir] - Loaded style point
+21 Nov 19:09:16 CONFIG [config.datadir] - Loaded style polygon
+21 Nov 19:09:16 CONFIG [config.datadir] - Loaded style raster
+21 Nov 19:09:17 CONFIG [config.datadir] - Loaded workspace Escape-game
+21 Nov 19:09:17 CONFIG [config.datadir] - Loaded namespace Escape-game
+21 Nov 19:09:17 CONFIG [config.datadir] - Loaded style heatmap
+21 Nov 19:09:17 CONFIG [config.datadir] - Loaded data store PostGIS
+21 Nov 19:09:17 CONFIG [config.datadir] - Loaded feature type objets, enabled
+21 Nov 19:09:17 CONFIG [config.datadir] - Loaded layer objets
+21 Nov 19:09:17 INFO   [geoserver.config] - Read Catalog in 1.174 s: workspaces: 1, namespaces: 1, styles: 6, stores: 1, resources: 1, layers: 1, layer groups: 0.
+21 Nov 19:09:18 CONFIG [gwc.config] - Will look for 'geowebcache.xml' in directory '/opt/geoserver/data_dir/gwc'.
+21 Nov 19:09:18 CONFIG [config.XMLConfiguration] - TileLayerConfiguration file validated fine.
+21 Nov 19:09:18 CONFIG [config.XMLConfiguration] - Initializing GridSets from /opt/geoserver/data_dir/gwc
+21 Nov 19:09:18 INFO   [config.XMLConfiguration] - Read GridSet InspireCRS84Quad
+21 Nov 19:09:18 CONFIG [config.XMLConfiguration] - Initializing layers from /opt/geoserver/data_dir/gwc
+21 Nov 19:09:18 CONFIG [gwc.layer] - Initializing GWC configuration based on GeoServer's Catalog
+21 Nov 19:09:18 CONFIG [gwc.layer] - GeoServer TileLayer store base directory is: gwc-layers
+21 Nov 19:09:18 CONFIG [gwc.layer] - Loading tile layers from gwc-layers
+21 Nov 19:09:18 CONFIG [gwc.layer] - Loaded 0 tile layers in 3.689 ms
+21 Nov 19:09:18 CONFIG [storage.BlobStoreAggregator] - BlobStoreConfiguration /opt/geoserver/data_dir/gwc contained no blob store infos.
+21 Nov 19:09:18 CONFIG [storage.DefaultStorageFinder] - Found system environment variableGEOWEBCACHE_CACHE_DIR set to /opt/geoserver/data_dir/gwc, using it as the default prefix.
+21 Nov 19:09:18 CONFIG [gwc.config] - Will look for 'geowebcache-diskquota.xml' in directory '/opt/geoserver/data_dir/gwc'.
+21 Nov 19:09:19 CONFIG [gwc.config] - Will look for 'geowebcache-diskquota-jdbc.xml' in directory '/opt/geoserver/data_dir/gwc'.
+21 Nov 19:09:19 CONFIG [diskquota.ConfigLoader] - Quota config is: /opt/geoserver/data_dir/gwc/geowebcache-diskquota.xml
+21 Nov 19:09:19 CONFIG [diskquota.ConfigLoader] - Quota config is: /opt/geoserver/data_dir/gwc/geowebcache-diskquota.xml
+21 Nov 19:09:19 CONFIG [config.datadir] - Loading GeoServer config...
+21 Nov 19:09:19 CONFIG [config.datadir] - Loaded service 'WMSInfoImpl-241ded18:19a9c8847fd:-7ffb', enabled
+21 Nov 19:09:19 CONFIG [config.datadir] - Loaded service 'WFSInfoImpl-241ded18:19a9c8847fd:-7ff8', enabled
+21 Nov 19:09:19 CONFIG [config.datadir] - Loaded service 'WMTSInfoImpl-241ded18:19a9c8847fd:-7ffa', enabled
+21 Nov 19:09:19 CONFIG [config.datadir] - Loaded service 'WCSInfoImpl-241ded18:19a9c8847fd:-7ff9', enabled
+21 Nov 19:09:19 CONFIG [config.datadir] - Loaded service 'csw', enabled
+21 Nov 19:09:19 CONFIG [config.datadir] - Loaded service 'WPSInfoImpl-241ded18:19a9c8847fd:-7ff7', enabled
+21 Nov 19:09:19 CONFIG [config.datadir] - Catalog and configuration loader uses 12 threads out of 12 available cores.
+21 Nov 19:09:19 CONFIG [config.datadir] - Loading workspace services and settings...
+21 Nov 19:09:19 CONFIG [config.datadir] - Loaded service 'WMSInfoImpl-1f065121:19a3edcb23a:-7fd4', enabled
+21 Nov 19:09:19 CONFIG [config.datadir] - GeoServer config (settings and services) loaded in 262.7 ms
+21 Nov 19:09:19 CONFIG [gwc.config] - Initializing GeoServer specific GWC configuration from gwc-gs.xml
+21 Nov 19:09:20 INFO   [flow.config] - Loaded control-flow rule: ows.global=100
+21 Nov 19:09:20 INFO   [flow.config] - Loaded control-flow rule: ows.wms.getmap=10
+21 Nov 19:09:20 INFO   [flow.config] - Loaded control-flow rule: ows.wfs.getfeature.application/msexcel=4
+21 Nov 19:09:20 INFO   [flow.config] - Loaded control-flow rule: user=6
+21 Nov 19:09:20 INFO   [flow.config] - Loaded control-flow rule: ows.gwc=16
+21 Nov 19:09:20 INFO   [flow.config] - Loaded control-flow rule: user.ows.wps.execute=1000/d;30s
+21 Nov 19:09:20 INFO   [flow.config] - Loaded control-flow rule: user.ows.wms.getmap=30/s
+21 Nov 19:09:20 INFO   [flow.config] - Loaded control-flow rule: ip=10
+21 Nov 19:09:20 CONFIG [geoserver.flow] - Control-flow active with 8 flow controllers
+21 Nov 19:09:20 WARN   [gce.imagemosaic] - Unable to set ordering between tiff readers spi
+21 Nov 19:09:22 WARN   [turbojpeg.TurboJPEGMapResponse] - The turbo jpeg encoder is available for usage
+21 Nov 19:09:22 CONFIG [geowebcache.GeoWebCacheDispatcher] - Invoked setServletPrefix(gwc)
+21 Nov 19:09:22 CONFIG [wms.WMSService] - Will NOT recombine tiles for non-tiling clients.
+21 Nov 19:09:22 CONFIG [wms.WMSService] - Will proxy requests to backend that are not getmap or getcapabilities.
+21 Nov 19:09:22 CONFIG [geoserver.security] - AuthenticationCache Initialized with 1000 Max Entries, 300 seconds idle time, 600 seconds time to live and 3 concurrency level
+21 Nov 19:09:22 CONFIG [geoserver.security] - AuthenticationCache Eviction Task created to run every 600 seconds
+21 Nov 19:09:25 INFO   [geoserver.monitor] - Monitor extension enabled
+21 Nov 19:09:25 CONFIG [geoserver.wps] - Found 7 bindable processes in GeoServer specific processes
+21 Nov 19:09:25 CONFIG [geoserver.wps] - Found 89 bindable processes in Deprecated processes
+21 Nov 19:09:25 CONFIG [geoserver.wps] - Blacklisting process vec:GroupCandidateSelection as the input groupingAttributes of type class java.lang.Object cannot be handled
+21 Nov 19:09:25 CONFIG [geoserver.wps] - Found 31 bindable processes in Vector processes
+21 Nov 19:09:25 CONFIG [geoserver.wps] - Blacklisting process ras:ConvolveCoverage as the input kernel of type class javax.media.jai.KernelJAI cannot be handled
+21 Nov 19:09:25 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input zones of type class java.lang.Object cannot be handled
+21 Nov 19:09:25 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input nodata of type class it.geosolutions.jaiext.range.Range cannot be handled
+21 Nov 19:09:25 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input rangeData of type class java.lang.Object cannot be handled
+21 Nov 19:09:25 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the output zonal statistics of type interface java.util.List cannot be handled
+21 Nov 19:09:25 CONFIG [geoserver.wps] - Found 18 bindable processes in Raster processes
+21 Nov 19:09:25 CONFIG [geoserver.wps] - Found 48 bindable processes in Geometry processes
+21 Nov 19:09:25 CONFIG [geoserver.wps] - Found 1 bindable processes in PolygonLabelProcess
+21 Nov 19:09:25 CONFIG [geoserver.wps] - Found 1 bindable processes in geo
+21 Nov 19:09:25 CONFIG [geoserver.wps] - Found 1 bindable processes in geo
+21 Nov 19:09:25 CONFIG [diskquota.ConfigLoader] - Quota config is: /opt/geoserver/data_dir/gwc/geowebcache-diskquota.xml
+21 Nov 19:09:25 CONFIG [diskquota.DiskQuotaMonitor] - Setting up disk quota periodic enforcement task
+21 Nov 19:09:25 CONFIG [diskquota.DiskQuotaMonitor] - 0 layers configured with their own quotas. 
+21 Nov 19:09:25 CONFIG [diskquota.DiskQuotaMonitor] - 0 layers attached to global quota 20.0 GB
+21 Nov 19:09:25 CONFIG [diskquota.DiskQuotaMonitor] - Disk quota periodic enforcement task set up every 5 SECONDS
+21 Nov 19:09:26 CONFIG [geoserver.security] - Start reloading user/groups for service named default
+21 Nov 19:09:26 CONFIG [geoserver.security] - Reloading user/groups successful for service named default
+21 Nov 19:30:38 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:38 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:38 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:38 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:38 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:38 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:38 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:38 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:38 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:38 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:38 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:38 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:38 INFO   [geoserver.flow] - Request control-flow performed, running requests: 3, blocked requests: 3
+21 Nov 19:30:38 INFO   [geoserver.flow] - Request control-flow performed, running requests: 2, blocked requests: 4
+21 Nov 19:30:38 INFO   [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 5
+21 Nov 19:30:38 INFO   [geoserver.flow] - Request control-flow performed, running requests: 5, blocked requests: 1
+21 Nov 19:30:38 INFO   [geoserver.flow] - Request control-flow performed, running requests: 6, blocked requests: 0
+21 Nov 19:30:38 INFO   [geoserver.flow] - Request control-flow performed, running requests: 4, blocked requests: 2
+21 Nov 19:30:38 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:38 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:38 INFO   [geoserver.flow] - Request control-flow performed, running requests: 7, blocked requests: 0
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request control-flow performed, running requests: 10, blocked requests: 2
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request control-flow performed, running requests: 8, blocked requests: 4
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request control-flow performed, running requests: 10, blocked requests: 2
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.3730468750000004 : 2.4609375000000004, 48.864714761802794 : 48.922499263758255]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.3730468750000004,48.864714761802794,2.4609375000000004,48.922499263758255, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.1093750000000004 : 2.4609375000000004, 48.922499263758255 : 49.15296965617042]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.1093750000000004,48.922499263758255,2.4609375000000004,49.15296965617042, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.5488281250000004 : 2.6367187500000004, 48.864714761802794 : 48.922499263758255]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.5488281250000004,48.864714761802794,2.6367187500000004,48.922499263758255, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[1.7578125000000002 : 2.1093750000000004, 48.922499263758255 : 49.15296965617042]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=1.7578125000000002,48.922499263758255,2.1093750000000004,49.15296965617042, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.3730468750000004 : 2.4609375000000004, 48.80686346108519 : 48.864714761802794]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.3730468750000004,48.80686346108519,2.4609375000000004,48.864714761802794, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.2851562500000004 : 2.3730468750000004, 48.864714761802794 : 48.922499263758255]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.2851562500000004,48.864714761802794,2.3730468750000004,48.922499263758255, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.3730468750000004 : 2.4609375000000004, 48.980216985374994 : 49.03786794532644]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.3730468750000004,48.980216985374994,2.4609375000000004,49.03786794532644, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.3730468750000004 : 2.4609375000000004, 48.922499263758255 : 48.980216985374994]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.3730468750000004,48.922499263758255,2.4609375000000004,48.980216985374994, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.2851562500000004 : 2.3730468750000004, 48.80686346108519 : 48.864714761802794]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.2851562500000004,48.80686346108519,2.3730468750000004,48.864714761802794, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.2851562500000004 : 2.3730468750000004, 48.922499263758255 : 48.980216985374994]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.2851562500000004,48.922499263758255,2.3730468750000004,48.980216985374994, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:39 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:39 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:39 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request control-flow performed, running requests: 2, blocked requests: 10
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request completed, running requests: 1, blocked requests: 11
+21 Nov 19:30:39 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:39 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request completed, running requests: 0, blocked requests: 12
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request completed, running requests: 3, blocked requests: 9
+21 Nov 19:30:39 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:39 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:39 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:39 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:39 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 11
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request control-flow performed, running requests: 3, blocked requests: 9
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request control-flow performed, running requests: 5, blocked requests: 7
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request completed, running requests: 2, blocked requests: 10
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request completed, running requests: 3, blocked requests: 9
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request control-flow performed, running requests: 4, blocked requests: 8
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request completed, running requests: 3, blocked requests: 9
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request completed, running requests: 3, blocked requests: 9
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request completed, running requests: 3, blocked requests: 9
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request completed, running requests: 3, blocked requests: 9
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request control-flow performed, running requests: 6, blocked requests: 6
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request completed, running requests: 5, blocked requests: 7
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.0214843750000004 : 2.1093750000000004, 48.80686346108519 : 48.864714761802794]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.0214843750000004,48.80686346108519,2.1093750000000004,48.864714761802794, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.1093750000000004 : 2.4609375000000004, 48.69096039092552 : 48.922499263758255]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.1093750000000004,48.69096039092552,2.4609375000000004,48.922499263758255, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[1.7578125000000002 : 2.1093750000000004, 48.69096039092552 : 48.922499263758255]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=1.7578125000000002,48.69096039092552,2.1093750000000004,48.922499263758255, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.4609375000000004 : 2.8125, 48.922499263758255 : 49.15296965617042]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.4609375000000004,48.922499263758255,2.8125,49.15296965617042, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.4609375000000004 : 2.8125, 48.69096039092552 : 48.922499263758255]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.4609375000000004,48.69096039092552,2.8125,48.922499263758255, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:39 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.3730468750000004 : 2.4609375000000004, 49.03786794532644 : 49.095452162534826]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.3730468750000004,49.03786794532644,2.4609375000000004,49.095452162534826, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request control-flow performed, running requests: 6, blocked requests: 5
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request completed, running requests: 5, blocked requests: 6
+21 Nov 19:30:39 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:39 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:39 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request control-flow performed, running requests: 4, blocked requests: 4
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request completed, running requests: 5, blocked requests: 3
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request completed, running requests: 3, blocked requests: 5
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request control-flow performed, running requests: 6, blocked requests: 2
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request completed, running requests: 4, blocked requests: 4
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request control-flow performed, running requests: 5, blocked requests: 3
+21 Nov 19:30:39 INFO   [geoserver.servlets] - OutputStream was successfully aborted.
+21 Nov 19:30:39 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:39 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request control-flow performed, running requests: 5, blocked requests: 1
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request completed, running requests: 4, blocked requests: 2
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request completed, running requests: 5, blocked requests: 1
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request control-flow performed, running requests: 6, blocked requests: 0
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.1093750000000004 : 2.1972656250000004, 48.80686346108519 : 48.864714761802794]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.1093750000000004,48.80686346108519,2.1972656250000004,48.864714761802794, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:39 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request completed, running requests: 5, blocked requests: 0
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.1972656250000004 : 2.2851562500000004, 48.922499263758255 : 48.980216985374994]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.1972656250000004,48.922499263758255,2.2851562500000004,48.980216985374994, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.3730468750000004 : 2.4609375000000004, 48.864714761802794 : 48.922499263758255]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.3730468750000004,48.864714761802794,2.4609375000000004,48.922499263758255, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.2851562500000004 : 2.3730468750000004, 48.864714761802794 : 48.922499263758255]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.2851562500000004,48.864714761802794,2.3730468750000004,48.922499263758255, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:39 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.2851562500000004 : 2.3730468750000004, 48.922499263758255 : 48.980216985374994]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.2851562500000004,48.922499263758255,2.3730468750000004,48.980216985374994, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:39 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.2851562500000004 : 2.3730468750000004, 48.80686346108519 : 48.864714761802794]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.2851562500000004,48.80686346108519,2.3730468750000004,48.864714761802794, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:39 INFO   [geoserver.flow] - Request completed, running requests: 4, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:40 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:40 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request completed, running requests: 2, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request completed, running requests: 2, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:40 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request completed, running requests: 0, blocked requests: 1
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request completed, running requests: 0, blocked requests: 1
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request control-flow performed, running requests: 3, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request control-flow performed, running requests: 2, blocked requests: 1
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request control-flow performed, running requests: 4, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request control-flow performed, running requests: 5, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request control-flow performed, running requests: 6, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.1093750000000004 : 2.1972656250000004, 48.864714761802794 : 48.922499263758255]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.1093750000000004,48.864714761802794,2.1972656250000004,48.922499263758255, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.1972656250000004 : 2.2851562500000004, 48.80686346108519 : 48.864714761802794]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.1972656250000004,48.80686346108519,2.2851562500000004,48.864714761802794, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:40 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request completed, running requests: 5, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.1972656250000004 : 2.2851562500000004, 48.864714761802794 : 48.922499263758255]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.1972656250000004,48.864714761802794,2.2851562500000004,48.922499263758255, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.1972656250000004 : 2.2851562500000004, 48.748945343432936 : 48.80686346108519]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.1972656250000004,48.748945343432936,2.2851562500000004,48.80686346108519, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.3730468750000004 : 2.4609375000000004, 48.80686346108519 : 48.864714761802794]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.3730468750000004,48.80686346108519,2.4609375000000004,48.864714761802794, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:40 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request completed, running requests: 1, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.2851562500000004 : 2.3730468750000004, 48.748945343432936 : 48.80686346108519]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.2851562500000004,48.748945343432936,2.3730468750000004,48.80686346108519, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:40 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request completed, running requests: 1, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request completed, running requests: 1, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request completed, running requests: 1, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:40 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request completed, running requests: 1, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request control-flow performed, running requests: 2, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request control-flow performed, running requests: 3, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request control-flow performed, running requests: 4, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request control-flow performed, running requests: 5, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request control-flow performed, running requests: 6, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.1093750000000004 : 2.1972656250000004, 48.748945343432936 : 48.80686346108519]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.1093750000000004,48.748945343432936,2.1972656250000004,48.80686346108519, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.1093750000000004 : 2.1972656250000004, 48.922499263758255 : 48.980216985374994]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.1093750000000004,48.922499263758255,2.1972656250000004,48.980216985374994, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:40 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.3730468750000004 : 2.4609375000000004, 48.748945343432936 : 48.80686346108519]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.3730468750000004,48.748945343432936,2.4609375000000004,48.80686346108519, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.3730468750000004 : 2.4609375000000004, 48.922499263758255 : 48.980216985374994]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.3730468750000004,48.922499263758255,2.4609375000000004,48.980216985374994, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request completed, running requests: 5, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:40 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.0214843750000004 : 2.1093750000000004, 48.864714761802794 : 48.922499263758255]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.0214843750000004,48.864714761802794,2.1093750000000004,48.922499263758255, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request completed, running requests: 3, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.4609375000000004 : 2.5488281250000004, 48.864714761802794 : 48.922499263758255]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.4609375000000004,48.864714761802794,2.5488281250000004,48.922499263758255, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request completed, running requests: 3, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request completed, running requests: 1, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:40 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 1
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request control-flow performed, running requests: 2, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request control-flow performed, running requests: 3, blocked requests: 1
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request control-flow performed, running requests: 4, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request control-flow performed, running requests: 5, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request control-flow performed, running requests: 6, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.0214843750000004 : 2.1093750000000004, 48.80686346108519 : 48.864714761802794]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.0214843750000004,48.80686346108519,2.1093750000000004,48.864714761802794, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.0214843750000004 : 2.1093750000000004, 48.922499263758255 : 48.980216985374994]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.0214843750000004,48.922499263758255,2.1093750000000004,48.980216985374994, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:40 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request completed, running requests: 5, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request completed, running requests: 4, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.0214843750000004 : 2.1093750000000004, 48.748945343432936 : 48.80686346108519]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.0214843750000004,48.748945343432936,2.1093750000000004,48.80686346108519, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.4609375000000004 : 2.5488281250000004, 48.922499263758255 : 48.980216985374994]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.4609375000000004,48.922499263758255,2.5488281250000004,48.980216985374994, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.4609375000000004 : 2.5488281250000004, 48.80686346108519 : 48.864714761802794]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.4609375000000004,48.80686346108519,2.5488281250000004,48.864714761802794, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:40 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:40 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:40 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.4609375000000004 : 2.5488281250000004, 48.748945343432936 : 48.80686346108519]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.4609375000000004,48.748945343432936,2.5488281250000004,48.80686346108519, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request completed, running requests: 2, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request completed, running requests: 2, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+21 Nov 19:30:40 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:40 INFO   [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 1
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request control-flow performed, running requests: 3, blocked requests: 1
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request control-flow performed, running requests: 2, blocked requests: 2
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request control-flow performed, running requests: 4, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request control-flow performed, running requests: 5, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request control-flow performed, running requests: 6, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.3730468750000004 : 2.4169921875000004, 48.864714761802794 : 48.8936153614802]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.3730468750000004,48.864714761802794,2.4169921875000004,48.8936153614802, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:41 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request completed, running requests: 5, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.2851562500000004 : 2.3291015625000004, 48.864714761802794 : 48.8936153614802]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.2851562500000004,48.864714761802794,2.3291015625000004,48.8936153614802, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.3730468750000004 : 2.4169921875000004, 48.80686346108519 : 48.83579746243093]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.3730468750000004,48.80686346108519,2.4169921875000004,48.83579746243093, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.3291015625000004 : 2.3730468750000004, 48.8936153614802 : 48.922499263758255]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.3291015625000004,48.8936153614802,2.3730468750000004,48.922499263758255, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.3291015625000004 : 2.3730468750000004, 48.83579746243093 : 48.864714761802794]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.3291015625000004,48.83579746243093,2.3730468750000004,48.864714761802794, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:41 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:41 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:41 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request completed, running requests: 3, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request completed, running requests: 2, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request completed, running requests: 2, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request completed, running requests: 1, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.3291015625000004 : 2.3730468750000004, 48.864714761802794 : 48.8936153614802]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.3291015625000004,48.864714761802794,2.3730468750000004,48.8936153614802, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 1
+21 Nov 19:30:41 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request completed, running requests: 2, blocked requests: 1
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request control-flow performed, running requests: 2, blocked requests: 1
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request control-flow performed, running requests: 3, blocked requests: 1
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request control-flow performed, running requests: 4, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request control-flow performed, running requests: 5, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request control-flow performed, running requests: 6, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.3730468750000004 : 2.4169921875000004, 48.83579746243093 : 48.864714761802794]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.3730468750000004,48.83579746243093,2.4169921875000004,48.864714761802794, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.2851562500000004 : 2.3291015625000004, 48.922499263758255 : 48.951366470947725]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.2851562500000004,48.922499263758255,2.3291015625000004,48.951366470947725, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.2851562500000004 : 2.3291015625000004, 48.8936153614802 : 48.922499263758255]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.2851562500000004,48.8936153614802,2.3291015625000004,48.922499263758255, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.2412109375000004 : 2.2851562500000004, 48.922499263758255 : 48.951366470947725]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.2412109375000004,48.922499263758255,2.2851562500000004,48.951366470947725, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:41 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request completed, running requests: 5, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:41 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request completed, running requests: 3, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.3730468750000004 : 2.4169921875000004, 48.8936153614802 : 48.922499263758255]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.3730468750000004,48.8936153614802,2.4169921875000004,48.922499263758255, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request completed, running requests: 3, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.3291015625000004 : 2.3730468750000004, 48.922499263758255 : 48.951366470947725]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.3291015625000004,48.922499263758255,2.3730468750000004,48.951366470947725, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request completed, running requests: 2, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request completed, running requests: 1, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request control-flow performed, running requests: 1, blocked requests: 1
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request control-flow performed, running requests: 2, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request control-flow performed, running requests: 3, blocked requests: 1
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request control-flow performed, running requests: 4, blocked requests: 1
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request control-flow performed, running requests: 5, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request control-flow performed, running requests: 6, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.2412109375000004 : 2.2851562500000004, 48.8936153614802 : 48.922499263758255]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.2412109375000004,48.8936153614802,2.2851562500000004,48.922499263758255, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:41 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request completed, running requests: 5, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.2412109375000004 : 2.2851562500000004, 48.864714761802794 : 48.8936153614802]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.2412109375000004,48.864714761802794,2.2851562500000004,48.8936153614802, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:41 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request completed, running requests: 4, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.2412109375000004 : 2.2851562500000004, 48.83579746243093 : 48.864714761802794]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.2412109375000004,48.83579746243093,2.2851562500000004,48.864714761802794, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.4169921875000004 : 2.4609375000000004, 48.8936153614802 : 48.922499263758255]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.4169921875000004,48.8936153614802,2.4609375000000004,48.922499263758255, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.4169921875000004 : 2.4609375000000004, 48.83579746243093 : 48.864714761802794]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.4169921875000004,48.83579746243093,2.4609375000000004,48.864714761802794, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:41 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request completed, running requests: 3, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.2851562500000004 : 2.3291015625000004, 48.83579746243093 : 48.864714761802794]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.2851562500000004,48.83579746243093,2.3291015625000004,48.864714761802794, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:41 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:41 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request completed, running requests: 2, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request control-flow performed, running requests: 2, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request completed, running requests: 2, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request completed, running requests: 1, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request control-flow performed, running requests: 2, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request control-flow performed, running requests: 3, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request control-flow performed, running requests: 5, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request control-flow performed, running requests: 4, blocked requests: 1
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request control-flow performed, running requests: 6, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.4169921875000004 : 2.4609375000000004, 48.922499263758255 : 48.951366470947725]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.4169921875000004,48.922499263758255,2.4609375000000004,48.951366470947725, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.4169921875000004 : 2.4609375000000004, 48.864714761802794 : 48.8936153614802]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.4169921875000004,48.864714761802794,2.4609375000000004,48.8936153614802, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:41 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request completed, running requests: 5, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.2412109375000004 : 2.2851562500000004, 48.80686346108519 : 48.83579746243093]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.2412109375000004,48.80686346108519,2.2851562500000004,48.83579746243093, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:41 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:41 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request completed, running requests: 3, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request completed, running requests: 3, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.3291015625000004 : 2.3730468750000004, 48.80686346108519 : 48.83579746243093]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.3291015625000004,48.80686346108519,2.3730468750000004,48.83579746243093, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.3730468750000004 : 2.4169921875000004, 48.922499263758255 : 48.951366470947725]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.3730468750000004,48.922499263758255,2.4169921875000004,48.951366470947725, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getServiceInfo
+21 Nov 19:30:41 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request completed, running requests: 2, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request [WMS 1.1.1 GetMap] starting, processing through flow controllers
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request control-flow performed, running requests: 3, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.2851562500000004 : 2.3291015625000004, 48.80686346108519 : 48.83579746243093]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.2851562500000004,48.80686346108519,2.3291015625000004,48.83579746243093, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:41 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request completed, running requests: 2, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request completed, running requests: 1, blocked requests: 0
+21 Nov 19:30:41 INFO   [geoserver.wms] - 
+Request: getMap
+	Angle = 0.0
+	BaseUrl = http://localhost:8080/geoserver/
+	Bbox = SRSEnvelope[2.4169921875000004 : 2.4609375000000004, 48.80686346108519 : 48.83579746243093]
+	BgColor = java.awt.Color[r=255,g=255,b=255]
+	Buffer = 0
+	Clip = null
+	CQLFilter = null
+	Crs = GEOGCS["WGS 84", 
+  DATUM["World Geodetic System 1984", 
+    SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], 
+    AUTHORITY["EPSG","6326"]], 
+  PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], 
+  UNIT["degree", 0.017453292519943295], 
+  AXIS["Geodetic longitude", EAST], 
+  AXIS["Geodetic latitude", NORTH], 
+  AUTHORITY["EPSG","4326"]]
+	Elevation = []
+	Env = {}
+	Exceptions = SE_XML
+	FeatureId = null
+	FeatureVersion = null
+	Filter = null
+	Format = image/png
+	FormatOptions = {}
+	Get = true
+	Height = 256
+	Interpolations = []
+	Layers = [org.geoserver.wms.MapLayerInfo@eb707238]
+	MaxFeatures = null
+	Palette = null
+	RawKvp = {TILED=true, REQUEST=GetMap, FORMAT=image/png, SRS=EPSG:4326, BBOX=2.4169921875000004,48.80686346108519,2.4609375000000004,48.83579746243093, VERSION=1.1.1, STYLES=, SERVICE=WMS, WIDTH=256, HEIGHT=256, TRANSPARENT=true, LAYERS=Escape-game:objets}
+	RemoteOwsType = null
+	RemoteOwsURL = null
+	Request = GetMap
+	RequestCharset = UTF-8
+	ScaleMethod = null
+	Sld = null
+	SldBody = null
+	SldVersion = null
+	SortBy = null
+	SortByArrays = null
+	SRS = EPSG:4326
+	StartIndex = null
+	StyleBody = null
+	StyleFormat = sld
+	Styles = [StyleImpl[ name=Escape-game:heatmap]]
+	StyleUrl = null
+	StyleVersion = null
+	Tiled = true
+	TilesOrigin = null
+	Time = []
+	Transparent = true
+	ValidateSchema = false
+	Version = 1.1.1
+	ViewParams = null
+	Width = 256
+21 Nov 19:30:41 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
+21 Nov 19:30:41 INFO   [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0

@@ -119,7 +119,42 @@ let app = Vue.createApp({
                     pointToLayer: (feature, latlng) => {
                         let mark = L.marker(latlng, { icon: icone });
                         mark.on('click', () => {
-                            this.ajouterObjet(obj);
+                            
+                            if (obj.code) {
+                                let alert_code = {
+                                    1:"Le coffre est verouillé mais le mot de passe pour l'ouvrir est le nom du musée sur lequel tu te trouves :",
+                                    7:"Le coffre est verouillé par le code a 4 chhiffres que tu viens de récupérer :",
+                                }
+                                let prompt_msg = alert_code[obj.id];
+                                let reponse = prompt(prompt_msg);
+
+                                if (reponse != obj.code) {
+                                    alert("Mauvais code ! Réessaie plus tard.");
+                                    return;
+                                }
+
+                                alert("Code correct ! Tu peux ramasser l'objet.");
+                            }
+                            
+                            let message_obj = {
+                                0: "Bravo vous avez trouvé " + obj.nom + " ! Maintenant, rendez-vous au musée le plus proche pour continuer votre quête.",
+                                2: "Bravo vous avez trouvé " + obj.nom + " ! Maintenant, rendez-vous au quartier artistique plus au Nord.",
+                                3: "Bravo vous avez trouvé " + obj.nom + " ! Maintenant, rendez-vous au grand parc qui se trouve à l'Ouest de là ou tu te trouves.",
+                                4: "Bravo vous avez trouvé " + obj.nom + " ! Maintenant, tes pîerres pourrons ouvrir le coffre qui se trouve du côté des Trocadéros.",
+                                6: "Bravo vous avez trouvé " + obj.nom + " ! Maintenant, avec ce code tu pourras ouvrir le coffre qui se trouve à deux pas d'ici au symbole même de Paris.",
+                                8:" Bravo vous avez trouvé " + obj.nom + " Tu as tous les pouvoirs entre tes mains pour sauver le monde.",
+                            }
+
+                            if (obj.id in message_obj) {
+                                let message = message_obj[obj.id];
+                                alert(message);
+                            }
+
+                            
+                            if (obj.id in message_obj){
+                                this.ajouterObjet(obj);
+                            }
+                            
                             this.suppObjetCarte(obj);
                             map.removeLayer(mark);
                             console.log("Objet ramassé :", obj.nom);
