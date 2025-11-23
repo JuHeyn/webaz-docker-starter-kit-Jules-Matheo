@@ -87,7 +87,6 @@ let app = Vue.createApp({
                 .then(response => response.json())
                 .then(obj => {          // récupere l'objet de départ via l'API
                     this.objetCarte = obj[0];
-
                     if (this.objetCarte.code) {
 
                         fetch('/api/enigme?id=' + this.objetCarte.id)
@@ -96,6 +95,7 @@ let app = Vue.createApp({
 
                         if (!this.objetCarte.enigme.saisie) {
                             let requis = [] ;
+                            this.objetCarte.posé = [];
                             this.objetCarte.enigme.reponse.split(";").forEach(pierre_str => requis.push(Number(pierre_str))); // Sépare toutes les réponses nécessaires
                             this.objetCarte.restant = requis;
                         
@@ -121,6 +121,7 @@ let app = Vue.createApp({
                                     this.objetCarte.enigme = eng[0];
                                     if (!this.objetCarte.enigme.saisie) {
                                         let requis = [] ;
+                                        this.objetCarte.posé = [];
                                         this.objetCarte.enigme.reponse.split(";").forEach(pierre_str => requis.push(Number(pierre_str)));   // Sépare toutes les réponses nécessaires
                                         this.objetCarte.restant = requis;
                                     }
@@ -182,6 +183,7 @@ let app = Vue.createApp({
 
                                 } else if (this.objetCarte.restant.includes(this.équipé.id)) {
 
+                                    this.objetCarte.posé.push(this.équipé)
                                     this.objetCarte.restant = this.objetCarte.restant.filter(n => n !== this.équipé.id );       // Retire la pierre posée des pierres restantes
                                     
                                     this.objets = this.objets.filter(o => o.id !== this.équipé.id);                             // Supprime l'objet de l'inventaire
@@ -189,7 +191,9 @@ let app = Vue.createApp({
                                     alert("Tu as posé la " + this.équipé.nom + " sur le coffre.");
 
                                     if (this.objetCarte.restant.length == 0) {
-                                        alert("Tu as ouvert le coffre !")
+                                        alert("Tu as ouvert le coffre !");
+                                        this.objetCarte.posé.forEach(o => this.ajouterObjet(o))
+                                        
                                     } else {
                                         alert("Pour ouvrir ce coffre, il te reste " + this.objetCarte.restant.length + " pierres à poser");
                                         this.équipé = {nom : null, id: -1};

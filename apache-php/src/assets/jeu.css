@@ -1,5 +1,7 @@
 body {
     margin: 0;
+    overflow: hidden;
+    height: 100vh;
 }
 
 #fin {
@@ -18,7 +20,7 @@ body {
 
 #jeu {
     display: grid;
-    grid-template-columns: auto 150px;
+    grid-template-columns: auto 160px;
     grid-template-rows: auto 10vh;
 }
 
@@ -48,8 +50,16 @@ body {
 #inventaire {
     grid-column: 2;
     grid-row: 1 / span 2;
+    display: grid;
+    grid-template-rows: auto 10vh;
     background-color: #dda15e;
+    height: 100vh;
+}
+
+#infos {
     border: 2px solid #bc6c25;
+    height: 100%;
+    width: 100%;
 }
 
 #temps {
@@ -69,11 +79,18 @@ body {
 
 #liste {
     display: flex;
+    height: 90vh;
+    width: 100%;
     flex-direction: column;
-    padding: 0;
     margin: auto;
     gap : 20px;
-    margin-top: 10px;
+    margin-bottom: 0;
+    grid-row: 1;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border: 2px solid #bc6c25;
+    scrollbar-gutter: stable;
+    scrollbar-color: #bc6c25 #dda15e;
 }
 
 .objets {
@@ -81,7 +98,7 @@ body {
     grid-template-rows: 50px 120px;
     height: 180px;
     width: 120px;
-    margin: auto;
+    /* margin: auto; */
     border: 3px solid #bc6c25;
     padding: 0 5px 5px 5px;
 }
