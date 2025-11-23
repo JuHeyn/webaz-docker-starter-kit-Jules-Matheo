@@ -27,26 +27,26 @@ var layerControl = L.control.layers(null, {'Triche' : heatmap },{collapsed : fal
 let app = Vue.createApp({
   data() {
     return {
-        debut : new Date(),
+        debut : new Date(),             // Permet de calculer l'intervalle
         intervalle : '00:00:00',
-        objets : [],
-        objetCarte : [],
-        équipé : {},
+        objets : [],                    // Objets présents dans l'inventaire
+        objetCarte : {},                // Objet présent sur la carte
+        équipé : {},                    // Objet équipé
         };
    
     },
 
     mounted() {
-        this.chargerObjets();
+        this.chargerObjets();           // Charge le premier objet du jeu et récupère le pseudo du joueur
         this.chargerPseudo();
     },
 
     methods: {
         chargerPseudo() {
-            this.pseudo = document.getElementById('pseudo').innerText;
+            this.pseudo = document.getElementById('pseudo').innerText; // Passage de PHP à JS
         },
 
-        horloge() {
+        horloge() {                     // Actualisation de l'intervalle
             let actuel = new Date();
             let deltaSec = Math.floor((actuel - this.debut)/1000);
             let h = Math.floor(deltaSec / 3600);
@@ -60,14 +60,14 @@ let app = Vue.createApp({
             this.intervalle = h + ":" + m + ":" + s;
         },
 
-        adresseImage(chemin) {
+        adresseImage(chemin) {          // Appose le chemin du dossier image
             return "../assets/img/" + chemin
         },
 
-        équiper (objet) {
+        équiper (objet) {               // Place un objet dans l'attribut equipé
             if (objet.id == this.équipé.id) {
                 this.équipé = {nom : null, id: -1};
-                console.log("Pas d'objet équipé");
+                console.log("Pas d'objet équipé"); // Deséquipe
             } else {
                 this.équipé = objet;
                 console.log("Objet équipé : " + this.équipé.nom);
@@ -85,25 +85,25 @@ let app = Vue.createApp({
         chargerObjets() {
             fetch('/api/objets')
                 .then(response => response.json())
-                .then(obj => {
+                .then(obj => {          // récupere l'objet de départ via l'API
                     this.objetCarte = obj[0];
 
                     if (this.objetCarte.code) {
 
                         fetch('/api/enigme?id=' + this.objetCarte.id)
                                 .then(response => response.json)
-                                .then(eng => this.objetCarte.enigme = eng);
+                                .then(eng => this.objetCarte.enigme = eng);  // Récupère l'énigme, la réponse et le type de l'enigme de l'objet
 
                         if (!this.objetCarte.enigme.saisie) {
                             let requis = [] ;
-                            this.objetCarte.enigme.reponse.split(";").forEach(pierre_str => requis.push(Number(pierre_str)));
+                            this.objetCarte.enigme.reponse.split(";").forEach(pierre_str => requis.push(Number(pierre_str))); // Sépare toutes les réponses nécessaires
                             this.objetCarte.restant = requis;
                         
                         }
                     };
                     this.afficherObjetSurCarte();
                     console.log("objets chargés :", this.objetCarte.nom);
-                    nouvelleQuete("Il parait qu'une pierre se trouve sur le parvis d'une église située sur une ile de la capitale...");
+                    nouvelleQuete("Il parait qu'une pierre se trouve sur le parvis d'une église située sur une ile de la capitale...");  // Lance la première engime
                 })
 
         },
@@ -111,17 +111,17 @@ let app = Vue.createApp({
         chargerObjetSuivant(id) {
             fetch('/api/objets?id=' + id)
                 .then(response => response.json())
-                .then(obj => {
+                .then(obj => {                          // Récupère l'objet demandé via l'API
                     this.objetCarte = obj[0];
                     if (this.objetCarte.code) {
 
                         fetch('/api/enigme?id=' + this.objetCarte.id)
                                 .then(response => response.json())
-                                .then(eng => {
+                                .then(eng => {          // Récupère les infos de l'énigme
                                     this.objetCarte.enigme = eng[0];
                                     if (!this.objetCarte.enigme.saisie) {
                                         let requis = [] ;
-                                        this.objetCarte.enigme.reponse.split(";").forEach(pierre_str => requis.push(Number(pierre_str)));
+                                        this.objetCarte.enigme.reponse.split(";").forEach(pierre_str => requis.push(Number(pierre_str)));   // Sépare toutes les réponses nécessaires
                                         this.objetCarte.restant = requis;
                                     }
                                 })
@@ -142,7 +142,7 @@ let app = Vue.createApp({
             let zoom_actuel = map.getZoom();
             let nb_zoom_min = Number(this.objetCarte.min_zoom);
 
-            if ( zoom_actuel < nb_zoom_min) {
+            if ( zoom_actuel < nb_zoom_min) {           // ne pas afficher l'objet en dessous du nivea de zoom
                 return;
             }
 
@@ -166,7 +166,7 @@ let app = Vue.createApp({
 
                                 let reponse = prompt(this.objetCarte.enigme.question);
 
-                                if (this.objetCarte.enigme.reponse.toUpperCase().split(';').includes(reponse.toUpperCase())) {
+                                if (this.objetCarte.enigme.reponse.toUpperCase().split(';').includes(reponse.toUpperCase())) { //Vérifie avec les différentes réponses possibles
                                     alert("Code correct ! Tu peux ramasser l'objet.");    
                                 } else {
                                     alert("Mauvais code ! Réessaie plus tard.");
@@ -182,9 +182,9 @@ let app = Vue.createApp({
 
                                 } else if (this.objetCarte.restant.includes(this.équipé.id)) {
 
-                                    this.objetCarte.restant = this.objetCarte.restant.filter(n => n !== this.équipé.id );
+                                    this.objetCarte.restant = this.objetCarte.restant.filter(n => n !== this.équipé.id );       // Retire la pierre posée des pierres restantes
                                     
-                                    this.objets = this.objets.filter(o => o.id !== this.équipé.id); // Supprimer l'objet de l'inventaire
+                                    this.objets = this.objets.filter(o => o.id !== this.équipé.id);                             // Supprime l'objet de l'inventaire
 
                                     alert("Tu as posé la " + this.équipé.nom + " sur le coffre.");
 
@@ -206,12 +206,12 @@ let app = Vue.createApp({
                         }
                         
                         if (this.objetCarte.indice) {
-                            nouvelleQuete(this.objetCarte.indice, this.objetCarte.nom);
+                            nouvelleQuete(this.objetCarte.indice, this.objetCarte.nom);             // Modifie la quete
                         }
 
                         
                         if (!this.objetCarte.enigme){
-                            this.ajouterObjet(this.objetCarte);
+                            this.ajouterObjet(this.objetCarte);                                     // Ajoute l'objet ramassé à l'inventaire
                         }
 
                         map.removeLayer(mark);
@@ -220,7 +220,7 @@ let app = Vue.createApp({
                         let prochainObjet = this.objetCarte.obj_apres;
                         this.suppObjetCarte();
                         if (prochainObjet == -1) {
-                            finDuJeu(app.pseudo, app.intervalle);
+                            finDuJeu(app.pseudo, app.intervalle);                           // Lance la fin du jeu si il n'y a pas de prochain objet
                         } else {
                             this.chargerObjetSuivant(prochainObjet);
 
@@ -236,15 +236,15 @@ let app = Vue.createApp({
     }
     }).mount('#inventaire');
 
-var intervalID = setInterval(app.horloge, 1000);
+var intervalID = setInterval(app.horloge, 1000);            // Lance l'algo toutes les secondes
 var panneauFin = document.getElementById('fin');
-panneauFin.style.display = 'none';
+panneauFin.style.display = 'none';                          // Cache le message de fn
 
 function finDuJeu(pseudo, intervalle) {
     panneauFin.style.display = 'block';
     let score = intervalle.split(":");
     document.getElementById('score').innerText = score[1] + " min " + score[2] + " sec";
-    fetch('../score?pseudo=' + pseudo + "&score=" + intervalle);
+    fetch('../score?pseudo=' + pseudo + "&score=" + intervalle);        // Ajoute le score à la table des scores
     clearInterval(intervalID);
     intervalID = null;
 };

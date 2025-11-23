@@ -24,14 +24,6 @@ Flight::route('GET /score', function() {
     pg_query_params($link, "INSERT INTO score (nom, temps) VALUES ( $1, $2 )", [$_GET['pseudo'], $_GET['score']]);
 });
 
-// Flight::route('GET /score', function() {
-//     $link = Flight::get('db_link');
-//     $sql = "SELECT * FROM score ORDER BY temps";
-//     $reponse = pg_query($link, $sql);
-//     $resultats = pg_fetch_all($reponse);
-//     Flight::json($resultats);
-// });
-
 Flight::route('/jeu', function() {
     Flight::render('jeu');
 });
@@ -89,21 +81,6 @@ Flight::route('GET /api/enigme', function() {
     }   
     Flight::json($resultat);
 });
-// Flight::route('/test-db', function () {
-//     $host = 'db';
-//     $port = 5432;
-//     $dbname = 'mydb';
-//     $user = 'postgres';
-//     $pass = 'postgres';
-
-//     // Connexion BDD
-//     $link = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$pass");
-
-//     $sql = "SELECT * FROM points";
-//     $query = pg_query($link, $sql);
-//     $results = pg_fetch_all($query);
-//     Flight::json($results);
-// });
 
 Flight::start();
 
