@@ -19,16 +19,37 @@ body {
 #jeu {
     display: grid;
     grid-template-columns: auto 150px;
+    grid-template-rows: auto 10vh;
 }
 
 #map {
-    height: 100vh;
+    grid-column: 1;
+    grid-row: 1;
+    height: 90vh;
     margin: 0;
     z-index: 0;
+    border: 2px solid #bc6c25;
+}
+
+#quete {
+    grid-column: 1;
+    grid-row: 2;
+    background-color: #dda15e;
+    border: 2px solid #bc6c25;
+    color: #bc6c25;
+    padding-left: 30px;
+    font-weight: 500;
+}
+
+#quete h4 {
+    font-weight: 700;
 }
 
 #inventaire {
+    grid-column: 2;
+    grid-row: 1 / span 2;
     background-color: #dda15e;
+    border: 2px solid #bc6c25;
 }
 
 #temps {
@@ -57,8 +78,8 @@ body {
 
 .objets {
     display: grid;
-    grid-template-rows: 20px 120px;
-    height: 140px;
+    grid-template-rows: 50px 120px;
+    height: 180px;
     width: 120px;
     margin: auto;
     border: 3px solid #bc6c25;

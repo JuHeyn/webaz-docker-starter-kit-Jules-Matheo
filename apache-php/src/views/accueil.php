@@ -27,7 +27,7 @@
                 $sql = "SELECT * FROM score ORDER BY temps LIMIT 10";
                 $reponse = pg_query($link, $sql);
                 $scores = pg_fetch_all($reponse);
-                $ordre = 0;
+                $ordre = 1;
             ?>
             <table class="table table-bordered table-striped">
                 <thead class="table-dark">

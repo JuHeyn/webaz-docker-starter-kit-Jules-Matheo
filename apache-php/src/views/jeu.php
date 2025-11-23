@@ -18,7 +18,10 @@
         </div>
     </div>
     <div id="jeu" class="z-0">
-        <div id="map">
+        <div id="map"></div>
+        <div id="quete">
+            <h4>Quête actuelle :</h4>
+            <p id="quete_actu"></p>
         </div>
         <div id="inventaire" >
             <div class="mx-auto p-2">

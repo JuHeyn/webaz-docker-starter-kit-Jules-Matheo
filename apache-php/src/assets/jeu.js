@@ -87,8 +87,19 @@ let app = Vue.createApp({
                 .then(response => response.json())
                 .then(obj => {
                     this.objetsCarte = obj;
+                    this.objetsCarte.forEach(obj => {
+                        if (obj.code) {
+                            if (obj.code[0] == "1") {
+                                let requis = [] ;
+                                obj.code.substring(2).split(";").forEach(pierre_str => requis.push(Number(pierre_str)));
+                                obj.restant = requis;
+                            
+                            }
+                        }
+                    });
                     this.afficherObjetsSurCarte();
-                    console.log("objets chargés :", this.objets);
+                    console.log("objets chargés :", this.objetsCarte);
+                    nouvelleQuete("Il parait qu'une pierre se trouve sur le parvis d'une église située sur une ile de la capitale...");
                 })
 
         },
@@ -98,8 +109,18 @@ let app = Vue.createApp({
                 .then(response => response.json())
                 .then(obj => {
                     this.objetsCarte = obj;
+                    this.objetsCarte.forEach(obj => {
+                        if (obj.code) {
+                            if (obj.code[0] == "1") {
+                                let requis = [] ;
+                                obj.code.substring(2).split(";").forEach(pierre_str => requis.push(Number(pierre_str)));
+                                obj.restant = requis;
+                            }
+                        }
+                    });
+
                     this.afficherObjetsSurCarte();
-     
+
                     console.log("objet suivant :", obj[0].nom);
                 });
         },    
@@ -118,89 +139,99 @@ let app = Vue.createApp({
                     return;
                 }
 
-                        let geom = JSON.parse(obj.geom_wkt);
-                        
-                        let icone = L.icon({
-                            iconUrl: this.adresseImage(obj.image),
-                            iconSize: [48, 48],
-                            iconAnchor: [24, 24],
-                            popupAnchor: [0, -25]
-                        });
+                let geom = JSON.parse(obj.geom_wkt);
+                
+                let icone = L.icon({
+                    iconUrl: this.adresseImage(obj.image),
+                    iconSize: [48, 48],
+                    iconAnchor: [24, 24],
+                    popupAnchor: [0, -25]
+                });
 
-                        let couche = L.geoJSON(geom, {
-                            pointToLayer: (feature, latlng) => {
-                                let mark = L.marker(latlng, { icon: icone });
-                                mark.on('click', () => {
-                                    
-                                 /*   if (obj.id == 5) {
-                                        let pierres_requises = [0,2,3,4];
-
-                                        let pose_obj = this.équipé;
-
-
-                                        if (pose_obj.id in pierres_requises == false) {
-                                            alert("Pour ouvrir ce coffre, tu dois poser une des 4 pierres");
-                                            return; 
-                                        }
-
-                                        alert ("Tu as posé la " + pose_obj.nom + " sur le coffre.");
+                let couche = L.geoJSON(geom, {
+                    pointToLayer: (feature, latlng) => {
+                        let mark = L.marker(latlng, { icon: icone });
+                        mark.on('click', () => {
                             
-                                        this.objets = this.objets.filter(o => o.id !== pose_obj.id); // Supprimer l'objet de l'inventaire
-                                        this.équipé = {nom : null, id: -1};
-
-            
-                    
-                                    }*/
-                                    
-                                    
-                                    
-                                    if (obj.code) {
-                                        let alert_code = {
-                                            1:"Le coffre est verouillé mais le mot de passe pour l'ouvrir est le nom du musée sur lequel tu te trouves :",
-                                            7:"Le coffre est verouillé par le code a 4 chhiffres que tu viens de récupérer :",
-                                        }
-                                        let prompt_msg = alert_code[obj.id];
-                                        let reponse = prompt(prompt_msg);
-
-                                        if (reponse != obj.code) {
-                                            alert("Mauvais code ! Réessaie plus tard.");
-                                            return;
-                                        }
-
-                                        alert("Code correct ! Tu peux ramasser l'objet.");
+                            if (obj.code) {
+                                if (obj.code[0] == "0") {
+                                    let alert_code = {
+                                        1:"Le coffre est verouillé mais le mot de passe pour l'ouvrir est le nom du musée sur lequel tu te trouves :",
+                                        7:"Le coffre est verouillé par le code a 4 chhiffres que tu viens de récupérer :",
                                     }
-                                    
-                                    let message_obj = {
-                                        0: "Bravo vous avez trouvé " + obj.nom + " ! Maintenant, rendez-vous au musée le plus proche pour continuer votre quête.",
-                                        2: "Bravo vous avez trouvé " + obj.nom + " ! Maintenant, rendez-vous au quartier artistique plus au Nord.",
-                                        3: "Bravo vous avez trouvé " + obj.nom + " ! Maintenant, rendez-vous au grand parc qui se trouve à l'Ouest de là ou tu te trouves.",
-                                        4: "Bravo vous avez trouvé " + obj.nom + " ! Maintenant, tes 4 pierres pourrons ouvrir le coffre qui se trouve du côté des Trocadéros.",
-                                        6: "Bravo vous avez trouvé " + obj.nom + " ! Maintenant, avec ce code tu pourras ouvrir le coffre qui se trouve à deux pas d'ici au symbole même de Paris.",
-                                        8:" Bravo vous avez trouvé " + obj.nom + " Tu as tous les pouvoirs entre tes mains pour sauver le monde.",
-                                    }
+                                    let prompt_msg = alert_code[obj.id];
+                                    let reponse = prompt(prompt_msg);
 
-                                    if (obj.id in message_obj) {
-                                        let message = message_obj[obj.id];
-                                        alert(message);
-                                    }
-
-                                    
-                                    if (obj.id in message_obj){
-                                        this.ajouterObjet(obj);
-                                    }
-                                    
-                                    this.suppObjetCarte(obj);
-                                    map.removeLayer(mark);
-                                    console.log("Objet ramassé :", obj.nom);
-                                    if (obj.obj_apres == -1) {
-                                        finDuJeu(app.pseudo, app.intervalle);
+                                    if (obj.code.substring(2).toUpperCase().split(';').includes(reponse.toUpperCase())) {
+                                        alert("Code correct ! Tu peux ramasser l'objet.");    
                                     } else {
-                                        this.chargerObjetSuivant(obj.obj_apres);
+                                        alert("Mauvais code ! Réessaie plus tard.");
+                                        return;
                                     }
-                                });
-                                return mark;
+
+                                } else if (obj.code[0] == "1") {
+                                    
+                            
+                                    if (!this.équipé.nom) {
+
+                                        alert("Tu n'as pas d'objet équipé.");
+                                        return ;
+
+                                    } else if (obj.restant.includes(this.équipé.id)) {
+
+                                        obj.restant = obj.restant.filter(n => n !== this.équipé.id );
+                                        
+                                        this.objets = this.objets.filter(o => o.id !== this.équipé.id); // Supprimer l'objet de l'inventaire
+
+                                        alert("Tu as posé la " + this.équipé.nom + " sur le coffre.");
+
+                                        if (obj.restant.length == 0) {
+                                            alert("Tu as ouvert le coffre !")
+                                        } else {
+                                            alert("Pour ouvrir ce coffre, il te reste " + obj.restant.length + " pierres à poser");
+                                            this.équipé = {nom : null, id: -1};
+                                            return ;
+                                        }
+
+                                    } else {
+
+                                        alert("Il faut placer uniquement les pierres pour ouvrir le coffre !")
+                                        return ; 
+
+                                    }
+                                }
                             }
-                        })
+                            
+                            let message_obj = {
+                                0: "Maintenant, rendez-vous au musée le plus proche pour continuer votre quête.",
+                                2: "Maintenant, rendez-vous au quartier artistique plus au Nord.",
+                                3: "Maintenant, rendez-vous au grand parc qui se trouve à l'Ouest de là ou tu te trouves.",
+                                4: "Maintenant, tes 4 pierres pourrons ouvrir le coffre qui se trouve du côté des Trocadéros.",
+                                6: "Maintenant, avec ce code tu pourras ouvrir le coffre qui se trouve à deux pas d'ici au symbole même de Paris.",
+                                8: "Tu as tous les pouvoirs entre tes mains pour sauver le monde.",
+                            }
+
+                            if (obj.id in message_obj) {
+                                nouvelleQuete(message_obj[obj.id], obj.nom);
+                            }
+
+                            
+                            if (obj.id in message_obj){
+                                this.ajouterObjet(obj);
+                            }
+                            
+                            this.suppObjetCarte(obj);
+                            map.removeLayer(mark);
+                            console.log("Objet ramassé :", obj.nom);
+                            if (obj.obj_apres == -1) {
+                                finDuJeu(app.pseudo, app.intervalle);
+                            } else {
+                                this.chargerObjetSuivant(obj.obj_apres);
+                            }
+                        });
+                        return mark;
+                    }
+                })
 
                 couchesObjets.addLayer(couche);
             });
@@ -225,4 +256,15 @@ function finDuJeu(pseudo, intervalle) {
     fetch('../score?pseudo=' + pseudo + "&score=" + intervalle);
     clearInterval(intervalID);
     intervalID = null;
+};
+
+function nouvelleQuete(message, nom) {
+    if (nom) {
+        messageAlerte = "Bravo vous avez trouvé " + nom + " ! " + message;
+        alert(messageAlerte); 
+        document.getElementById('quete_actu').innerText = message;
+    } else {
+        alert(message); 
+        document.getElementById('quete_actu').innerText = message;
+    }
 }
