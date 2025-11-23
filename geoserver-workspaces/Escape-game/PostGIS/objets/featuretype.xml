@@ -1,14 +1,14 @@
 <featureType>
   <id>FeatureTypeInfoImpl-1f065121:19a3edcb23a:-7ff2</id>
-  <name>objets</name>
-  <nativeName>objets</nativeName>
+  <name>objet</name>
+  <nativeName>objet</nativeName>
   <namespace>
     <id>NamespaceInfoImpl-1f065121:19a3edcb23a:-7ff4</id>
   </namespace>
-  <title>objets</title>
+  <title>objet</title>
   <keywords>
     <string>features</string>
-    <string>objets</string>
+    <string>objet</string>
   </keywords>
   <nativeCRS>GEOGCS[&quot;WGS 84&quot;, 
   DATUM[&quot;World Geodetic System 1984&quot;, 

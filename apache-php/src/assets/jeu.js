@@ -19,7 +19,7 @@ map.on('zoomend', () => {
 
 // ################# HeatMap ################
 
-var heatmap = L.tileLayer.wms("http://localhost:8080/geoserver/wms", {layers: 'Escape-game:objets', format: 'image/png', transparent: true, tiled: true, crs: L.CRS.EPSG4326});
+var heatmap = L.tileLayer.wms("http://localhost:8080/geoserver/wms", {layers: 'Escape-game:objet', format: 'image/png', transparent: true, tiled: true, crs: L.CRS.EPSG4326});
 var layerControl = L.control.layers(null, {'Triche' : heatmap },{collapsed : false}).addTo(map);
 
 

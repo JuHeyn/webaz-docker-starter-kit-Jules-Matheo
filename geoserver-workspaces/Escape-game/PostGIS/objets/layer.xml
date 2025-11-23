@@ -1,9 +1,9 @@
 <layer>
-  <name>objets</name>
+  <name>Objet</name>
   <id>LayerInfoImpl-1f065121:19a3edcb23a:-7ff1</id>
   <type>VECTOR</type>
   <defaultStyle>
-    <id>StyleInfoImpl-1f065121:19a3edcb23a:-7fec</id>
+    <id>heatmap</id>
   </defaultStyle>
   <resource class="featureType">
     <id>FeatureTypeInfoImpl-1f065121:19a3edcb23a:-7ff2</id>
