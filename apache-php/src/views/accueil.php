@@ -10,6 +10,10 @@
     <div id="menu" class="position-absolute top-50 start-50 translate-middle text-center ">
         <div id="début">
             <h1>Bienvenue sur notre escape game</h1>
+            
+            <p>Ton but dans ce jeu sera de collecter les pierres de l'infinies ainsi que le gant de Thanos pour l'empecher de les prendre et supprimer la moitié de la planète. 
+                Nos agents nous ont informé qu'elles se sont éparpillées dans Paris et ça sera à toi de les retrouver</p>
+            
             <p>Cliquez ici pour commencer le jeu :</p>
             <form action="../jeu" method="POST">
                 <input type="text" id="pseudo" name="pseudo" required placeholder="Ton pseudo">

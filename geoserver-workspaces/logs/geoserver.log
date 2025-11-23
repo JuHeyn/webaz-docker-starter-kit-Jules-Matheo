@@ -4255,3 +4255,25 @@ Request: getMap
 	Width = 256
 21 Nov 19:30:41 INFO   [geoserver.flow] - releasing flow controllers for [WMS 1.1.1 GetMap]
 21 Nov 19:30:41 INFO   [geoserver.flow] - Request completed, running requests: 0, blocked requests: 0
+21 Nov 20:34:39 CONFIG [gwc.layer] - GeoServer TileLayer store base directory is: gwc-layers
+21 Nov 20:34:39 CONFIG [gwc.layer] - Loading tile layers from gwc-layers
+21 Nov 20:34:39 CONFIG [gwc.layer] - Loaded 0 tile layers in 4.814 ms
+21 Nov 20:34:40 CONFIG [gwc.layer] - GeoServer TileLayer store base directory is: gwc-layers
+21 Nov 20:34:40 CONFIG [gwc.layer] - Loading tile layers from gwc-layers
+21 Nov 20:34:40 CONFIG [gwc.layer] - Loaded 0 tile layers in 1.471 ms
+21 Nov 20:34:40 INFO   [jdbc.JDBCQuotaStore] - Closing up the JDBC quota store 
+CONFIG 2025-11-23 14:48:08,352 [main][Log4J2Logger.java:211] : Logging policy: Log4J2
+CONFIG 2025-11-23 14:48:08,523 [main][Log4J2Logger.java:185] : Factory implementations for category GridCoverageFactory:
+  org.geotools.coverage.grid.GridCoverageFactory
+CONFIG 2025-11-23 14:48:08,730 [main][Log4J2Logger.java:185] : Factory implementations for category FilterFactory:
+  org.geotools.filter.FilterFactoryImpl
+CONFIG 2025-11-23 14:48:08,748 [main][Log4J2Logger.java:185] : Factory implementations for category StyleFactory:
+  org.geotools.styling.StyleFactoryImpl
+CONFIG 2025-11-23 14:48:08,753 [main][Log4J2Logger.java:185] : Factory implementations for category FeatureFactory:
+  org.geotools.feature.LenientFeatureFactoryImpl
+  org.geotools.feature.ValidatingFeatureFactoryImpl
+DEBUG 2025-11-23 14:48:09,049 [main][Log4J2Logger.java:216] : Extension lookup 'XStreamPersisterInitializer', prior to bean geoserverExtensions initialisation.
+DEBUG 2025-11-23 14:48:09,050 [main][Log4J2Logger.java:216] : Extension lookup 'ExtensionFilter', prior to bean geoserverExtensions initialisation.
+DEBUG 2025-11-23 14:48:09,053 [main][Log4J2Logger.java:216] : Extension lookup 'ExtensionProvider', but provided ApplicationContext is unset.
+DEBUG 2025-11-23 14:48:09,053 [main][Log4J2Logger.java:216] : Extension lookup 'ExtensionFilter', but provided ApplicationContext is unset.
+DEBUG 2025-11-23 14:48:09,075 [main][Log4J2Logger.java:216] : CONFIGURING GEOSERVER LOGGING -------------------------
